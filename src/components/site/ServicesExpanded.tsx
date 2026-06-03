@@ -163,7 +163,7 @@ export function ServicesExpanded() {
 
                 <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 p-6 md:p-8 items-stretch">
                   {/* Left Column (Text content) - alternated on desktop */}
-                  <div className={`flex flex-col justify-between ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                  <div className={`flex flex-col justify-between min-w-0 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                     <div>
                       {/* Header */}
                       <div className="flex items-start gap-4">
@@ -235,14 +235,16 @@ export function ServicesExpanded() {
                   </div>
 
                   {/* Right Column (Visual Image) - alternated on desktop */}
-                  <div className={`relative rounded-lg overflow-hidden border border-border/40 aspect-[4/3] bg-surface/10 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent z-10 pointer-events-none" />
-                    <img
-                      src={s.image}
-                      alt={`${s.title} visual representation`}
-                      loading="lazy"
-                      className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-700 group-hover:scale-105"
-                    />
+                  <div className={`flex items-center min-w-0 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                    <div className="relative rounded-lg overflow-hidden border border-border/40 aspect-[4/3] w-full bg-surface/10">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent z-10 pointer-events-none" />
+                      <img
+                        src={s.image}
+                        alt={`${s.title} visual representation`}
+                        loading="lazy"
+                        className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
                 </div>
               </motion.div>
