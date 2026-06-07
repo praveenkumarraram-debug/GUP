@@ -298,9 +298,14 @@ const detailedOfferings: OfferingDetail[] = [
   }
 ];
 
+/** Slug helper */
+function toId(s: string) {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 function DetailedOfferingSection({ data }: { data: OfferingDetail }) {
   return (
-    <div className="py-24 border-b border-border/40">
+    <div id={toId(data.title)} className="py-24 border-b border-border/40 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 15 }}

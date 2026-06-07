@@ -35,7 +35,7 @@ const layers = [
 
 export function TechEcosystem() {
   return (
-    <section className="relative border-b border-border/40 bg-surface/10 overflow-hidden">
+    <section id="tech-ecosystem" className="relative border-b border-border/40 bg-surface/10 overflow-hidden scroll-mt-20">
       {/* Background glowing gradients */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 -translate-y-1/2 h-[250px] w-[250px] rounded-full bg-accent/5 blur-[80px] pointer-events-none" />

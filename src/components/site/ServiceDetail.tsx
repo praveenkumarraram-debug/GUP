@@ -49,7 +49,7 @@ export function ServiceDetail({
         </section>
       )}
 
-      <section className="border-b border-border/40">
+      <section id="capabilities" className="border-b border-border/40 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <h2 className="text-2xl md:text-3xl font-semibold text-gradient">Capabilities</h2>
           <div className="mt-10 grid gap-px bg-border/30 border border-border/40 rounded-xl overflow-hidden md:grid-cols-2">
@@ -78,7 +78,7 @@ export function ServiceDetail({
       </section>
 
       {detailedOfferings && detailedOfferings.length > 0 && (
-        <section className="border-b border-border/40 bg-surface/5">
+        <section id="offerings" className="border-b border-border/40 bg-surface/5 scroll-mt-20">
           <div className="mx-auto max-w-7xl px-6 py-20">
             <h2 className="text-2xl md:text-3xl font-semibold text-gradient mb-4">Detailed Service Packages & Engagement Models</h2>
             <p className="text-muted-foreground text-sm max-w-2xl mb-12">
@@ -201,7 +201,7 @@ export function ServiceDetail({
         </section>
       )}
 
-      <section className="border-b border-border/40 bg-surface/10">
+      <section id="tech-stack" className="border-b border-border/40 bg-surface/10 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <h2 className="text-2xl md:text-3xl font-semibold text-gradient">Technology stack</h2>
           <div className="mt-8 flex flex-wrap gap-2">

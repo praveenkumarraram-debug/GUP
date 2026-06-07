@@ -10,8 +10,9 @@ import {
   Bot,
   User,
   Terminal,
-  ArrowRight,
   ChevronRight,
+  Paperclip,
+  FileText,
 } from "lucide-react";
 
 interface Message {
@@ -110,8 +111,10 @@ export function Chatbot() {
   const [isTyping, setIsTyping] = useState(false);
   const [streamingText, setStreamingText] = useState("");
   const [streamingMessageId, setStreamingMessageId] = useState<string | null>(null);
+  const [attachedFile, setAttachedFile] = useState<File | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   // Auto-scroll to bottom of messages
   useEffect(() => {
@@ -154,16 +157,68 @@ export function Chatbot() {
     }, 600);
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) setAttachedFile(file);
+    // Reset so the same file can be re-selected
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
   const handleSendMessage = (text: string) => {
-    if (!text.trim() || isTyping || streamingMessageId) return;
+    const hasFile = !!attachedFile;
+    if (!text.trim() && !hasFile) return;
+    if (isTyping || streamingMessageId) return;
+
+    // Build display text
+    const displayText = hasFile
+      ? text.trim()
+        ? `${text.trim()} [📎 ${attachedFile!.name}]`
+        : `[📎 ${attachedFile!.name}]`
+      : text;
 
     // Add user message
     const userMsgId = Math.random().toString(36).substring(7);
     setMessages((prev) => [
       ...prev,
-      { id: userMsgId, sender: "user", text },
+      { id: userMsgId, sender: "user", text: displayText },
     ]);
     setInputValue("");
+    setAttachedFile(null);
+
+    // If only a file was sent with no text, trigger a dedicated file response
+    if (hasFile && !text.trim()) {
+      simulateBotResponse(
+        `I've received your file **${attachedFile!.name}**. Our engineering team can analyse it as part of your consultation.\n\nFor a formal review, share it via our secure contact form or email **enterprise@trustgrid.ai** — a Principal Engineer will respond within 48 hours.`,
+        [{ label: "Open Contact Form", to: "/contact" }],
+        ["Book strategy session", "GPU optimization", "LLM Engineering"]
+      );
+      return;
+    }
+
+    // If file attached with text, prepend a short ack before normal routing
+    if (hasFile) {
+      simulateBotResponse(
+        `File **${attachedFile!.name}** noted. Routing your query now…`,
+        undefined,
+        undefined
+      );
+      // Small delay then route the text query as normal
+      setTimeout(() => {
+        const cleanInput = text.toLowerCase().trim();
+        for (const entry of RESPONSE_DATABASE) {
+          if (entry.keywords.some((kw) => cleanInput.includes(kw))) {
+            simulateBotResponse(entry.response, entry.links, entry.suggestions);
+            return;
+          }
+        }
+        simulateBotResponse(
+          "I can assist with specialized inquiries regarding:\n\n* **GPU Optimization** (kernel tuning, CUDA stream concurrency)\n* **GPU-phi Platform** (multi-cloud Ray/K8s orchestrator)\n* **LLM Engineering** (quantization, PEFT/LoRA models)\n* **Sub-microsecond Fabrics** (InfiniBand/RDMA networks)\n* **Sustainability** (energy-aware workload time-shifting)\n\nCould you specify which of these domains you'd like to explore?",
+          [{ label: "Browse Offerings", to: "/offerings" }, { label: "Contact Us", to: "/contact" }],
+          ["GPU performance tuning", "What is GPU-phi?", "Accelerating LLMs", "Book strategy session"]
+        );
+      }, 900);
+      return;
+    }
 
     // Search response database
     const cleanInput = text.toLowerCase().trim();
@@ -276,11 +331,9 @@ export function Chatbot() {
                   <h3 className="font-display text-base font-semibold tracking-tight text-foreground">
                     GridOS Architect
                   </h3>
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <span className="font-mono text-accent/80">v1.2.0-core</span>
-                    <span>•</span>
-                    <span className="text-green-500">System Ready</span>
-                  </div>
+                  <p className="text-xs text-muted-foreground leading-tight">
+                    AI Engineering Assistant
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -420,30 +473,82 @@ export function Chatbot() {
                 e.preventDefault();
                 handleSendMessage(inputValue);
               }}
-              className="border-t border-border/40 bg-muted/10 px-4 py-3.5"
+              className="border-t border-border/40 bg-muted/10 px-4 py-3"
             >
-              <div className="relative flex items-center">
+              {/* Attached file preview chip */}
+              {attachedFile && (
+                <div className="mb-2 flex items-center gap-2 rounded-lg border border-accent/30 bg-accent/5 px-3 py-1.5">
+                  <FileText className="h-3.5 w-3.5 shrink-0 text-accent" />
+                  <span className="flex-1 truncate text-xs text-foreground/90 font-medium">{attachedFile.name}</span>
+                  <span className="text-[10px] text-muted-foreground shrink-0">
+                    {attachedFile.size > 1024 * 1024
+                      ? `${(attachedFile.size / 1024 / 1024).toFixed(1)} MB`
+                      : `${(attachedFile.size / 1024).toFixed(0)} KB`}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setAttachedFile(null)}
+                    className="ml-1 rounded p-0.5 text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="Remove attachment"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+              )}
+
+              <div className="relative flex items-center gap-2">
+                {/* Hidden file input */}
                 <input
-                  type="text"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  placeholder={
-                    isTyping || streamingMessageId
-                      ? "GridOS is executing response..."
-                      : "Query model core parameters..."
-                  }
+                  ref={fileInputRef}
+                  type="file"
+                  id="chatbot-file-upload"
+                  className="sr-only"
+                  accept=".pdf,.doc,.docx,.txt,.csv,.xlsx,.xls,.png,.jpg,.jpeg,.md"
+                  onChange={handleFileChange}
                   disabled={isTyping || !!streamingMessageId}
-                  className="w-full rounded-xl border border-border/60 bg-surface/50 py-2.5 pl-4 pr-11 text-sm text-foreground placeholder-muted-foreground/60 shadow-inner focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/40 disabled:opacity-60"
                 />
+
+                {/* Paperclip upload button */}
                 <button
-                  type="submit"
-                  disabled={!inputValue.trim() || isTyping || !!streamingMessageId}
-                  className="absolute right-2.5 rounded-lg bg-primary p-1.5 text-primary-foreground transition-all hover:bg-primary/90 disabled:bg-muted/30 disabled:text-muted-foreground cursor-pointer"
-                  aria-label="Send message"
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={isTyping || !!streamingMessageId}
+                  className="shrink-0 rounded-lg border border-border/60 bg-surface/50 p-2 text-muted-foreground hover:border-accent/40 hover:text-accent transition-all disabled:opacity-40 cursor-pointer"
+                  title="Attach a file (PDF, DOCX, CSV, image…)"
+                  aria-label="Attach file"
                 >
-                  <Send className="h-4 w-4" />
+                  <Paperclip className="h-4 w-4" />
                 </button>
+
+                {/* Text input */}
+                <div className="relative flex-1">
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder={
+                      isTyping || streamingMessageId
+                        ? "GridOS is executing response..."
+                        : "Query model core parameters..."
+                    }
+                    disabled={isTyping || !!streamingMessageId}
+                    className="w-full rounded-xl border border-border/60 bg-surface/50 py-2.5 pl-4 pr-10 text-sm text-foreground placeholder-muted-foreground/60 shadow-inner focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/40 disabled:opacity-60"
+                  />
+                  <button
+                    type="submit"
+                    disabled={(!inputValue.trim() && !attachedFile) || isTyping || !!streamingMessageId}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-primary p-1.5 text-primary-foreground transition-all hover:bg-primary/90 disabled:bg-muted/30 disabled:text-muted-foreground cursor-pointer"
+                    aria-label="Send message"
+                  >
+                    <Send className="h-3.5 w-3.5" />
+                  </button>
+                </div>
               </div>
+
+              {/* Accepted formats hint */}
+              <p className="mt-1.5 text-center text-[10px] text-muted-foreground/50">
+                Attach PDF, DOCX, CSV, TXT, or images
+              </p>
             </form>
           </motion.div>
         )}

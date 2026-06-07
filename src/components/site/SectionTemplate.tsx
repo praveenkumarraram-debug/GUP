@@ -12,9 +12,17 @@ export interface SectionData {
   metrics: { label: string; value: string }[];
 }
 
+/** Convert a title to a URL-safe id: "GPU Optimization" → "gpu-optimization" */
+function toId(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export function SectionTemplate({ data }: { data: SectionData }) {
   return (
-    <div className="py-20 border-b border-border/40">
+    <div id={toId(data.title)} className="py-20 border-b border-border/40 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
