@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import {
-  Cpu, Zap, Bot, Network, Brain, Sparkles, Shield, ArrowUpRight,
+  Cpu, Zap, Bot, Network, Brain, Sparkles, Shield, ArrowUpRight, ShieldCheck,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
@@ -62,6 +62,13 @@ const services = [
     to: "/llmops-services",
     desc: "Operate the full LLM lifecycle — from custom fine-tuning and evaluation to serving.",
     tags: ["Fine-Tuning", "vLLM", "Evaluation", "Guardrails"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "AI Trusted Reliability Engineering (AIRE)",
+    to: "/offerings",
+    desc: "NIST, ISO 42001, and EU AI Act compliance, AI Red Teaming, and safety guardrails.",
+    tags: ["NIST RMF", "EU AI Act", "ISO 42001", "AI Red Team", "Guardrails"],
   },
 ];
 

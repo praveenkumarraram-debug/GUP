@@ -345,6 +345,110 @@ const offeringCategories: OfferingCategory[] = [
         ]
       }
     ]
+  },
+  {
+    id: "ai-trusted-reliability-engineering",
+    title: "Category 5: AI Trusted Reliability Engineering (AIRE)",
+    description: "End-to-end reliability engineering, NIST risk mapping, EU AI Act conformity audits, ISO 42001 system management, adversarial red teaming, and cross-framework safety guardrails.",
+    offerings: [
+      {
+        title: "5.1 NIST AI Risk Management & Governance System",
+        description: "Establishing formal AI governance frameworks, mapping intended use context and potential impact, implementing statistical risk measurement indices, and defining continuous mitigation treatments aligned with NIST AI RMF 1.0.",
+        keySituations: [
+          "Organizations lacking clear policies, ethics charters, or mapped accountabilities for AI systems.",
+          "Enterprise boards demanding standardized, independent risk audits of production ML models.",
+          "US federal procurement requiring alignment with NIST secure software framework guidelines."
+        ],
+        keyStatistics: [
+          "NIST compliance score: Promotes to 100% audit-readiness.",
+          "Governance setup time: Weeks instead of quarters using templates.",
+          "Identified risk blindspots: 90%+ mapping coverage across systems."
+        ],
+        offeringValue: "Establishes a solid, standardized foundation for enterprise AI governance that aligns engineering controls with corporate compliance policies.",
+        expectedOutcomes: [
+          "An active AI Risk Register, AI Governance Charter, and system RACI matrix.",
+          "Quantitative risk scoring dashboards integrated with operational monitoring."
+        ]
+      },
+      {
+        title: "5.2 EU AI Act Conformity Assessment & High-Risk Obligations",
+        description: "Comprehensive alignment pipelines for Articles 8–15 of the EU AI Act covering technical data governance, representativeness audits, automated log retention, and robust human-in-the-loop oversight systems.",
+        keySituations: [
+          "Credit scoring, lending, HR hiring, and medical diagnostics systems classified as high-risk under the EU AI Act.",
+          "Risk of severe regulatory penalties (up to 7% global turnover) due to unvetted or undocumented AI models.",
+          "Need to register high-risk models in the official EU database with a validated CE conformity mark."
+        ],
+        keyStatistics: [
+          "Bias detection accuracy: 99%+ statistical audit coverage.",
+          "Data provenance completeness: 100% traced lineage records.",
+          "Compliance readiness verification: Complete Articles 8-15 technical dossiers generated."
+        ],
+        offeringValue: "De-risks EU market access and guarantees compliance with the world's most stringent AI safety legislation.",
+        expectedOutcomes: [
+          "Ready-to-submit Articles 9–15 Technical Documentation Package.",
+          "Data representativeness verification report and data lineage maps.",
+          "CE conformity mark preparation package."
+        ]
+      },
+      {
+        title: "5.3 ISO 42001:2023 & ISO 23894 Management Systems (AIMS)",
+        description: "Implementing, auditing, and optimizing an Artificial Intelligence Management System (AIMS) under ISO 42001 and ISO 23894 guidance to establish continuous process controls.",
+        keySituations: [
+          "Enterprise customers requiring certifiable proof of AI management systems in procurement vendor checks.",
+          "Inconsistent internal procedures causing operational variance in model releases and validation.",
+          "Fragmented oversight across engineering, legal, security, and procurement departments."
+        ],
+        keyStatistics: [
+          "AIMS alignment: Full certification audit readiness.",
+          "Operational consistency: Standardized QA gates for 100% of internal AI initiatives.",
+          "Vendor compliance checks: Automated third-party model risk scoring frameworks."
+        ],
+        offeringValue: "Creates a universally recognized certifiable management framework for AI systems, demonstrating quality assurance to global buyers.",
+        expectedOutcomes: [
+          "ISO 42001 context analysis, leadership policy charter, and operational guidelines.",
+          "Management review templates and internal audit checkbooks."
+        ]
+      },
+      {
+        title: "5.4 Adversarial AI Red Teaming & Model Penetration Testing",
+        description: "Dynamic stress testing and security validation of production models against prompt injection, model extraction, data poisoning, demographic bias, and privacy leakage vectors.",
+        keySituations: [
+          "External-facing conversational applications exposed to jailbreaking and prompt injection threats.",
+          "Sensitive clinical or customer databases linked to LLMs via APIs without security gates.",
+          "Proprietary model weights or training pipelines vulnerable to extraction or poisoning attacks."
+        ],
+        keyStatistics: [
+          "Prompt injection mitigation: 99.8% capture rate at proxy gates.",
+          "Malicious payload detection: 99.9% block rate.",
+          "EDR detection lift: 35%+ improvement on polymorphic binary checks."
+        ],
+        offeringValue: "Exposes security and ethical flaws in a controlled sandbox environment before hostile actors exploit them in production.",
+        expectedOutcomes: [
+          "A comprehensive Threat Model, Vulnerability Register, and Red Team Findings report.",
+          "Custom adversarial test suites to run in CI/CD test gates."
+        ]
+      },
+      {
+        title: "5.5 Reliability Architecture, Guardrails & Real-Time Observability",
+        description: "Deployment of high-performance proxy gateways (guardrails), real-time drift, bias, and performance monitors, and cryptographically signed audit logging networks.",
+        keySituations: [
+          "Production models experiencing accuracy decay, hallucination, or demographic bias drift.",
+          "High-volume deployments lacking line-rate threat filters, SLA trackers, or incident alert triggers.",
+          "Audit anxiety from lack of immutable transaction histories."
+        ],
+        keyStatistics: [
+          "Added filter latency overhead: Under 15ms per request.",
+          "Drift detection: Real-time statistical alerts within 5 minutes of anomaly.",
+          "Incident MTTR: Reduced from hours to under 3 minutes through playbooks."
+        ],
+        offeringValue: "Guarantees runtime reliability, safety-first fail-safes, and continuous alignment under live traffic conditions.",
+        expectedOutcomes: [
+          "Live telemetry dashboards tracking drift, bias, accuracy, and SLA metrics.",
+          "Immutable, signed audit trail ledger integration.",
+          "Automatic incident response scripts and human escalation workflows."
+        ]
+      }
+    ]
   }
 ];
 

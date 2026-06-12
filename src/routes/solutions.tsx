@@ -219,6 +219,52 @@ const technicalCategories: TechnicalCategory[] = [
       },
     ],
   },
+  {
+    id: "trusted-reliability-engineering",
+    title: "AI Trusted Reliability Engineering (AIRE)",
+    subtitle: "Category 5",
+    icon: ShieldCheck,
+    subcategories: [
+      {
+        title: "5.1 NIST AI Risk Management & Governance",
+        points: [
+          "AI Governance Frameworks — Establish formal charters, RACI accountability matrices, and internal AI ethics boards",
+          "System Impact Mapping — Map system intent, lifecycle stages, and stakeholder impact profiles per NIST AI RMF Map function",
+          "Risk Measurement Metrics — Implement quantitative models for calculating and tracking fairness, security, and bias risk levels",
+          "Continuous Mitigation Management — Define risk treatment pathways and implement automated controls to reduce risk profiles"
+        ]
+      },
+      {
+        title: "5.2 EU AI Act Conformity Assessment",
+        points: [
+          "Article 9 Risk Management Systems — Maintain structured lifecycle risk logs and mitigation tracking packages",
+          "Article 10 Data Governance — Conduct bias detection audits, statistical parity testing, and representativeness reviews",
+          "Article 11 Technical Documentation — Generate complete system lifecycle architecture dossiers and conformity files",
+          "Article 13 Transparency Disclosures — Design consumer disclosures and model cards for user-facing interactions",
+          "Article 14 Human Oversight Gates — Engineer automated escalation workflows, confidence calibration, and override control systems",
+          "Article 15 Cybersecurity & Robustness — Deploy safety-critical system configurations and adversarial stress test frameworks",
+          "Post-Market Monitoring Setup — Establish automated conformity log reviews, incident trackers, and regulatory notification queues"
+        ]
+      },
+      {
+        title: "5.3 ISO 42001 & ISO 23894 AIMS Implementation",
+        points: [
+          "AIMS Context Setup — Define organizational factor scopes, compliance metrics, and leadership commitment policies",
+          "Annex A Control Systems — Implement standard audit templates for lifecycle planning, third-party risk, and data quality checks",
+          "Continuous Performance Monitoring — Automate internal KPI reviews, audit checklists, and continual optimization reviews"
+        ]
+      },
+      {
+        title: "5.4 Adversarial AI Red Teaming & Security Observability",
+        points: [
+          "Dynamic Adversarial Testing — Probe models under sandbox conditions for prompt injections, model extraction, and data leaks",
+          "Real-Time Proxy Gateways — Deploy high-performance guardrails (under 15ms latency) to sanitize inputs and outputs",
+          "Cryptographic Transaction Logs — Integrate immutable audit logging networks to capture every system read/write in detail",
+          "Automated Incident Playbooks — Execute containment protocols to isolate compromised model sessions in real-time"
+        ]
+      }
+    ]
+  }
 ];
 
 interface Sector {
@@ -497,6 +543,16 @@ const categoryThemes: Record<
     dotColor: "bg-rose-500",
     iconBox: "bg-rose-50 border-rose-200/60 text-rose-600",
     eyebrow: "text-rose-600",
+  },
+  "trusted-reliability-engineering": {
+    accent: "text-sky-600",
+    badgeBg: "bg-sky-50/80",
+    badgeText: "text-sky-600 border-sky-200/50",
+    borderHover: "hover:border-sky-500/35",
+    glowHover: "hover:shadow-[0_12px_30px_-10px_rgba(14,165,233,0.12)]",
+    dotColor: "bg-sky-500",
+    iconBox: "bg-sky-50 border-sky-200/60 text-sky-600",
+    eyebrow: "text-sky-600",
   },
 };
 

@@ -25,6 +25,7 @@ const coreOfferingsItems = [
   { label: "LLM Optimization & AI Agents", href: "/offerings#llm-optimization-agents" },
   { label: "AI Cybersecurity", href: "/offerings#ai-cybersecurity" },
   { label: "AI Infrastructure Engineering", href: "/offerings#ai-infrastructure-engineering" },
+  { label: "AI Trusted Reliability Engineering (AIRE)", href: "/offerings#ai-trusted-reliability-engineering" },
 ];
 
 const industryOfferingsItems = [
@@ -126,6 +127,7 @@ const solutionsItems = [
   { label: "LLM Optimization & Enterprise Generative AI", href: "/solutions#llm-opt" },
   { label: "AI Agents & Autonomous Systems", href: "/solutions#agentic-ai" },
   { label: "AI Cybersecurity & Governance", href: "/solutions#security-gov" },
+  { label: "AI Trusted Reliability Engineering (AIRE)", href: "/solutions#trusted-reliability-engineering" },
 ];
 
 const capabilitiesItems = [
@@ -138,6 +140,7 @@ const capabilitiesItems = [
   { label: "AI Security & Cyber Dom", href: "/capabilities#ai-security-cyber-dom-protection-mesh" },
   { label: "Hardened Sandbox Shell & Agent Execution", href: "/capabilities#hardened-sandbox-shell-agent-execution" },
   { label: "Multi-Agent Fleet Orchestration", href: "/capabilities#multi-agent-fleet-orchestration" },
+  { label: "AI Trusted Reliability Engineering (AIRE)", href: "/capabilities#ai-trusted-reliability-engineering" },
   { label: "All Capabilities", href: "/capabilities" },
 ];
 
@@ -152,6 +155,9 @@ const useCasesItems = [
   { label: "Managed Threat Defense (MDR)", href: "/use-cases#cybersecurity-mdr" },
   { label: "Breach & Attack Simulation (BAS)", href: "/use-cases#cybersecurity-bas" },
   { label: "Industry AI Cybersecurity", href: "/use-cases#cybersecurity-industry" },
+  { label: "High-Risk Generative AI / RAG Systems", href: "/use-cases#high-risk-genai-rag" },
+  { label: "Credit Scoring & Lending AI", href: "/use-cases#credit-scoring-lending" },
+  { label: "Healthcare Clinical AI Applications", href: "/use-cases#healthcare-clinical-ai" },
 ];
 
 const platformItems = [
@@ -496,6 +502,41 @@ function UseCasesDropdown() {
                   <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">→</span>
                   <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans">
                     Secure Medical LLMOps
+                  </span>
+                </SectionLink>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-accent mb-2 pl-1">
+                Trusted AI & Compliance (AIRE)
+              </p>
+              <div className="space-y-2">
+                <SectionLink
+                  href="/use-cases#high-risk-genai-rag"
+                  className="flex items-center gap-2.5 py-1 px-1 rounded-md hover:bg-primary/[0.03] group/item transition-all"
+                >
+                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">→</span>
+                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans">
+                    High-Risk GenAI & RAG
+                  </span>
+                </SectionLink>
+                <SectionLink
+                  href="/use-cases#credit-scoring-lending"
+                  className="flex items-center gap-2.5 py-1 px-1 rounded-md hover:bg-primary/[0.03] group/item transition-all"
+                >
+                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">→</span>
+                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans font-sans">
+                    Credit Scoring & Lending
+                  </span>
+                </SectionLink>
+                <SectionLink
+                  href="/use-cases#healthcare-clinical-ai"
+                  className="flex items-center gap-2.5 py-1 px-1 rounded-md hover:bg-primary/[0.03] group/item transition-all"
+                >
+                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">→</span>
+                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans font-sans">
+                    Healthcare Clinical AI
                   </span>
                 </SectionLink>
               </div>

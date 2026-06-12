@@ -678,6 +678,136 @@ const useCasesData: UseCase[] = [
       { label: "Doctor Review Comp", value: "5x", sublabel: "Chart time compression" },
       { label: "Cost vs Public API", value: "80% Saved", sublabel: "Zero token pricing" }
     ]
+  },
+  {
+    id: "high-risk-genai-rag",
+    title: "High-Risk Generative AI / RAG Systems",
+    category: "Trusted AI & Compliance",
+    tagline: "Mitigating hallucinations, prompt injections, and data leakage in regulated search ecosystems.",
+    challengeBrief: "Enterprises face severe legal liabilities and data leakage risks when deploying conversational RAG/LLM solutions in high-risk areas like legal research, medical triage, and financial customer advisory.",
+    challengeDetailed1: "Without custom reliability engineering, LLMs generate ungrounded fabrications and cite false cases, leading to sanctions or clinical misdiagnoses. Standard web firewalls fail to stop prompt injections.",
+    challengeDetailed2: "Similarly, unsecured retrieval systems lack role-based access controls, leaking protected PII or confidential company data to unauthorized users during the context construction stage.",
+    solutionBrief: "We deployed grounding verification filters, differential privacy masking layers, instruction-hierarchy defenses, and clinician-escalation gateways.",
+    solutionDetailed1: "We engineered a real-time citation validation pipeline that correlates generated assertions against database facts, suppressing outputs below 85% grounding confidence.",
+    solutionDetailed2: "All inputs/outputs run through a 15ms guardrail proxy proxying prompt injection checks and redacting PII dynamically, while emergency override hooks gate high-risk actions.",
+    hardwareConfig: [
+      "NVIDIA H100 GPU nodes co-located with local database servers",
+      "High-performance local vector search clusters (Qdrant/Milvus)",
+      "gVisor runtime sandbox environments isolating model endpoints",
+      "Immutable cryptographic log storage disks"
+    ],
+    techStack: [
+      { name: "Llama-Guard Scanners", category: "Input/Output Sanitization" },
+      { name: "Qdrant Vector Cluster", category: "Knowledge Base" },
+      { name: "gVisor Container isolation", category: "Sandbox" },
+      { name: "SHAP/LIME explanation scripts", category: "Explainability" }
+    ],
+    capabilities: [
+      { title: "Retrieval Grounding Verification", description: "Real-time verification of generated claims against source document text." },
+      { title: "Prompt Injection Mitigation", description: "Multi-layered filters blocking prompt manipulation and jailbreaks." },
+      { title: "PII & PII Masking Gates", description: "Differential privacy filters masking private data prior to LLM processing." }
+    ],
+    outcomes: [
+      { title: "Hallucination suppression", metric: "< 0.4%", description: "Reduced ungrounded or fabricated claims from 6.2% down to 0.4% in legal copilots." },
+      { title: "Injection block rate", metric: "99.8%", description: "Mitigated adversarial inputs at the guardrail proxy gateway under red-team testing." },
+      { title: "Data leakage prevention", metric: "0 Leaks", description: "Enforced strict role-based access mapping on document retrieval indexes." }
+    ],
+    timeline: [
+      { phase: "Phase 1", duration: "3 Weeks", title: "Grounding Audit", details: "Measure baseline hallucination rates and audit retrieval access controls." },
+      { phase: "Phase 2", duration: "4 Weeks", title: "Guardrails Deploy", details: "Install high-performance input/output proxy gateways and injection scanners." },
+      { phase: "Phase 3", duration: "3 Weeks", title: "HITL Integration", details: "Code emergency escalation hooks and user verification interfaces." }
+    ],
+    metricsSummary: [
+      { label: "Hallucination Rate", value: "< 0.4%", sublabel: "Ungrounded claims" },
+      { label: "Injection Blocks", value: "99.8%", sublabel: "Adversarial capture" },
+      { label: "SLA Gateway Latency", value: "< 15ms", sublabel: "Real-time overhead" }
+    ]
+  },
+  {
+    id: "credit-scoring-lending",
+    title: "Credit Scoring & Lending AI",
+    category: "Trusted AI & Compliance",
+    tagline: "Bias mitigation and explainable reason codes for automated credit decisioning.",
+    challengeBrief: "Automated underwriting models risk perpetuating historical demographic discrimination, violating fair lending laws (ECOA, FCRA, EU AI Act Article 5b) without explainable AI layers.",
+    challengeDetailed1: "Black-box scoring engines fail to produce legally required reason codes for credit denials, leading to audit failures and regulatory enforcement actions.",
+    challengeDetailed2: "Training datasets inherit structural biases from legacy loan decisions, causing models to digital-redline applicants based on proxies for race, age, or gender.",
+    solutionBrief: "We implemented fairness-constrained training, demographic parity calibration, SHAP explainability layers, and an automated adverse action portal.",
+    solutionDetailed1: "We audited 300+ features to remove demographic proxies, applying demographic parity and equalized odds thresholds during model training.",
+    solutionDetailed2: "A model explanation service translates SHAP output vectors into human-readable consumer reason codes for every automated decline decision.",
+    hardwareConfig: [
+      "Dedicated secure CPU/GPU instances for batch risk scoring",
+      "HSM-backed cryptographic key arrays for transaction signing",
+      "FIPS 140-3 compliant database vaults"
+    ],
+    techStack: [
+      { name: "SHAP/LIME Explainers", category: "Explainable AI" },
+      { name: "Fairness-Constraints SDK", category: "Bias Mitigation" },
+      { name: "Model Registry", category: "Operations" },
+      { name: "Cryptographic Ledgers", category: "Auditing" }
+    ],
+    capabilities: [
+      { title: "Explainable Adverse Actions", description: "Legally compliant explanation code delivery for every credit decision." },
+      { title: "Demographic Proxy Auditing", description: "Systematic auditing of data features to identify and eliminate proxy features." },
+      { title: "Continuous Bias Tracking", description: "Real-time dashboarding of disparate impact ratio metrics." }
+    ],
+    outcomes: [
+      { title: "Disparate impact ratio", metric: "0.96", description: "Improved approval equality across protected classes, well above the 0.80 discrimination threshold." },
+      { title: "Explainability coverage", metric: "100%", description: "Generated legally sound explanations for every adverse lending decision automatically." },
+      { title: "Fair lending findings", metric: "0", description: "Passed federal regulatory examinations with zero compliance findings." }
+    ],
+    timeline: [
+      { phase: "Phase 1", duration: "4 Weeks", title: "Fairness Audit", details: "Perform disparate impact studies on historical training sets." },
+      { phase: "Phase 2", duration: "4 Weeks", title: "Model Calibration", details: "Re-train underwriting models with fairness constraints and remove proxy attributes." },
+      { phase: "Phase 3", duration: "3 Weeks", title: "XAI Portal Setup", details: "Connect SHAP explainer pipelines to the credit decision routing gateway." }
+    ],
+    metricsSummary: [
+      { label: "Disparate Impact Ratio", value: "0.96", sublabel: "Fair Lending compliant" },
+      { label: "Explanation Delivery", value: "100%", sublabel: "Adverse actions" },
+      { label: "Drift Scan Time", value: "< 24h", sublabel: "Continuous check" }
+    ]
+  },
+  {
+    id: "healthcare-clinical-ai",
+    title: "Healthcare Clinical AI Applications",
+    category: "Trusted AI & Compliance",
+    tagline: "Dual EU AI Act and Medical Device Regulation (MDR) compliance for diagnostic imaging.",
+    challengeBrief: "Healthcare diagnostic AIs suffer from false alarms, data drift, skin-type bias, and PHI exposure risks under medical device and data privacy regulations.",
+    challengeDetailed1: "Diagnostic models trained on fair-skinned cohorts drop in sensitivity from 95% to 71% on darker skin tones, creating medical disparities and liability risks.",
+    challengeDetailed2: "Additionally, clinician alarm fatigue from low-precision warning models causes vital alerts to be ignored, compromising safety-critical outcomes.",
+    solutionBrief: "We integrated skin-tone subgroup calibration, UMLS ontology validators, and alert-fatigue suppression algorithms under HIPAA guidelines.",
+    solutionDetailed1: "We augmented training pools with balanced dermatological images, implementing subgroup-specific threshold calibration to close the equity gap.",
+    solutionDetailed2: "A secondary validation layer parses outputs against UMLS knowledge graphs, suppressing low-precision alerts while hot-paging clinicians for critical findings.",
+    hardwareConfig: [
+      "HIPAA-certified GPU nodes co-located in hospital server clusters",
+      "FIPS-encrypted local NAS storage arrays",
+      "Isolated clinical LAN channels"
+    ],
+    techStack: [
+      { name: "UMLS Ontology Parser", category: "Clinical Validation" },
+      { name: "Differential Privacy SDK", category: "Data Protection" },
+      { name: "Triton Model Server", category: "Inference Engine" },
+      { name: "AutoAWQ Quantizer", category: "Compression" }
+    ],
+    capabilities: [
+      { title: "Clinical Ontology Validation", description: "Semantic validation of diagnostic output statements against medical knowledge databases." },
+      { title: "Fitzpatrick Equity Checks", description: "Continuous evaluation of imaging precision across skin types." },
+      { title: "Clinician Notification Escalation", description: "Risk-based triage routing for critical warning notifications." }
+    ],
+    outcomes: [
+      { title: "Fitzpatrick sensitivity gap", metric: "< 3%", description: "Reduced diagnostic disparity between fair and dark skin tones." },
+      { title: "Sepsis alert precision", metric: "58%", description: "Increased PPV from 22% to 58%, reducing false alarm fatigue by 55%." },
+      { title: "Sepsis mortality reduction", metric: "-18%", description: "Early warning optimizations and escalations directly improved patient survival." }
+    ],
+    timeline: [
+      { phase: "Phase 1", duration: "4 Weeks", title: "Equity Mapping", details: "Analyze diagnostic sensitivity gaps across historical cohorts." },
+      { phase: "Phase 2", duration: "5 Weeks", title: "Ontology Filter Setup", details: "Code SNOMED/UMLS verification scripts and integrate with the database." },
+      { phase: "Phase 3", duration: "4 Weeks", title: "HIPAA Site Deployment", details: "Deploy physical GPU enclosures in hospitals and test network paths." }
+    ],
+    metricsSummary: [
+      { label: "Derm Sensitivity Gap", value: "< 3%", sublabel: "Equity achieved" },
+      { label: "Sepsis Mortality", value: "-18%", sublabel: "Life-saving alerts" },
+      { label: "Alert Volume Cut", value: "55%", sublabel: "Alarm fatigue drop" }
+    ]
   }
 ];
 
