@@ -1144,7 +1144,7 @@ export function Header() {
         }
       `}</style>
 
-      <header className="sticky top-0 z-50 border-b border-border/40 bg-background/75 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-border/20 bg-background/20 backdrop-blur-xl">
         <div className="w-full flex h-16 items-center justify-between px-6 md:px-8">
 
           {/* Brand */}
