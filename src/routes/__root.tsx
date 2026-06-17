@@ -15,6 +15,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Chatbot } from "@/components/site/Chatbot";
 import { initAnalytics } from "@/lib/analytics/init";
+import { ExitIntentPopup } from "@/components/site/ExitIntentPopup";
 
 function NotFoundComponent() {
   return (
@@ -165,6 +166,7 @@ function RootComponent() {
         </main>
         <Footer />
         <Chatbot />
+        <ExitIntentPopup />
       </div>
     </QueryClientProvider>
   );
