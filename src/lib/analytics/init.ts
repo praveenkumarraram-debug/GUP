@@ -4,9 +4,9 @@
 // ============================================================
 import { startAnalytics, stopAnalytics } from './index';
 import { initVisitorTracking, trackSessionEnd } from './visitor';
-import { trackPageView, trackPageExit, resetScrollTracking } from './pageview';
+import { trackPageView, trackPageExit } from './pageview';
 import { initClickTracking } from './clicks';
-import { initScrollTracking } from './scroll';
+import { initScrollTracking, resetScrollTracking } from './scroll';
 import { initMouseTracking } from './mouse';
 import { initFormTracking } from './forms';
 import { initPerformanceTracking } from './performance';
