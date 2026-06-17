@@ -4,12 +4,9 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
-import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -78,76 +75,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TrustGrid.AI — Full-Spectrum AI Engineering for the Enterprise" },
-      {
-        name: "description",
-        content:
-          "TrustGrid.AI designs, builds, optimizes and secures enterprise AI infrastructure, GPU clusters, Agentic AI systems and autonomous business operations.",
-      },
-      { name: "author", content: "TrustGrid.AI" },
-      { name: "theme-color", content: "#ffffff" },
-      { property: "og:site_name", content: "TrustGrid.AI" },
-      { property: "og:type", content: "website" },
-      { property: "og:title", content: "TrustGrid.AI — Full-Spectrum AI Engineering" },
-      {
-        property: "og:description",
-        content: "Engineering AI systems that scale from GPUs to autonomous enterprises.",
-      },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@TrustGridAI" },
-      { name: "twitter:title", content: "TrustGrid.AI — Full-Spectrum AI Engineering" },
-      {
-        name: "twitter:description",
-        content: "Engineering AI systems that scale from GPUs to autonomous enterprises.",
-      },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
-      },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "TrustGrid.AI",
-          description:
-            "Full-Spectrum AI Engineering Company specializing in AI infrastructure, GPU performance engineering, Agentic AI, multi-agent systems and enterprise AI security.",
-          url: "/",
-          sameAs: [],
-        }),
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
