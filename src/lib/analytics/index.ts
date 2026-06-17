@@ -44,32 +44,26 @@ export function flushEvents() {
   const batch = [...eventQueue];
   eventQueue = [];
 
-  if (ANALYTICS_CONFIG.DEBUG) console.log('[Analytics] Flushing', batch.length, 'events to Google Sheets...');
+  if (ANALYTICS_CONFIG.DEBUG) console.log('[Analytics] Flushing', batch.length, 'events...');
 
-  // ─── Google Apps Script requires no-cors mode from browsers ───
-  // This is because Apps Script redirects POST requests, and
-  // standard CORS fetch blocks cross-origin redirects.
-  // no-cors sends the data silently (we can't read the response,
-  // but the data DOES arrive in the Google Sheet).
-  try {
-    fetch(ANALYTICS_CONFIG.ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',          // KEY FIX: bypasses CORS preflight
-      redirect: 'follow',
-      body: JSON.stringify(batch),
-      // Note: no Content-Type header — no-cors restricts custom headers.
-      // Apps Script parses the raw body regardless.
-    }).then(() => {
-      if (ANALYTICS_CONFIG.DEBUG) console.log('[Analytics] ✅ Batch sent successfully');
-    }).catch((err) => {
-      if (ANALYTICS_CONFIG.DEBUG) console.warn('[Analytics] ⚠️ Fetch error:', err);
-      // Re-queue on failure
-      eventQueue = [...batch, ...eventQueue];
-    });
-  } catch (err) {
-    if (ANALYTICS_CONFIG.DEBUG) console.warn('[Analytics] ⚠️ Send error:', err);
-    eventQueue = [...batch, ...eventQueue];
-  }
+  // ─── Method 1: no-cors fetch (works when deployment is fully public) ───
+  fetch(ANALYTICS_CONFIG.ENDPOINT, {
+    method: 'POST',
+    mode: 'no-cors',
+    redirect: 'follow',
+    body: JSON.stringify(batch),
+  }).then(() => {
+    if (ANALYTICS_CONFIG.DEBUG) console.log('[Analytics] ✅ Batch sent via fetch');
+  }).catch(() => {
+    // ─── Method 2: Image beacon fallback (always works, GET request) ───
+    // Encodes data as a URL parameter — bypasses all CORS/auth issues
+    if (ANALYTICS_CONFIG.DEBUG) console.log('[Analytics] 🔄 Trying Image beacon fallback...');
+    const encoded = encodeURIComponent(JSON.stringify(batch));
+    const url = `${ANALYTICS_CONFIG.ENDPOINT}?data=${encoded}`;
+    const img = new Image();
+    img.src = url;
+    if (ANALYTICS_CONFIG.DEBUG) img.onload = () => console.log('[Analytics] ✅ Sent via beacon');
+  });
 }
 
 // ─── Start / Stop ─────────────────────────────────────────────
