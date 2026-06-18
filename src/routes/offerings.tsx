@@ -313,175 +313,173 @@ const offeringCategories: OfferingCategory[] = [
 
 function DetailedOfferingSection({ data }: { data: OfferingCategory }) {
   const hasAdvisory = !!data.advisory;
-  return (
-    <div className="py-16 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className={`grid gap-8 items-start ${hasAdvisory ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
-          
-          {/* Advisory Column (if present) */}
-          {hasAdvisory && (
-            <div className="rounded-2xl border border-border/40 bg-surface/10 p-6 shadow-sm hover:border-primary/25 transition-all duration-300">
-              <h3 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border/30 flex items-center gap-2.5">
-                <Globe className="h-5 w-5 text-amber-500 animate-pulse-glow" />
-                Advisory Services
-              </h3>
-              <ul className="space-y-3.5">
-                {data.advisory!.map((adv, i) => {
-                  const parts = adv.split(":");
-                  return (
-                    <li key={i} className="flex items-start gap-2.5">
-                      <span className="text-amber-500 mt-0.5 shrink-0 text-sm">→</span>
-                      <span className="text-muted-foreground text-sm leading-relaxed">
-                        {parts.length > 1 ? (
-                          <>
-                            <strong className="text-foreground font-semibold">{parts[0]}</strong>
-                            {":"}
-                            {parts.slice(1).join(":")}
-                          </>
-                        ) : (
-                          adv
-                        )}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          )}
-          
-          {/* Solutions Column */}
-          <div className="rounded-2xl border border-border/40 bg-surface/10 p-6 shadow-sm hover:border-primary/25 transition-all duration-300">
-            <h3 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border/30 flex items-center gap-2.5">
-              <Zap className="h-5 w-5 text-accent animate-pulse-glow" />
-              Technical Solutions
-            </h3>
-            <ul className="space-y-3.5">
-              {data.solutions.map((sol, i) => {
-                const hasSep = sol.includes(" — ");
-                const parts = hasSep ? sol.split(" — ") : sol.split(":");
-                return (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-accent mt-0.5 shrink-0 text-sm">→</span>
-                    <span className="text-muted-foreground text-sm leading-relaxed">
-                      {parts.length > 1 ? (
-                        <>
-                          <strong className="text-foreground font-semibold">{parts[0]}</strong>
-                          {hasSep ? " — " : ":"}
-                          {parts.slice(1).join(hasSep ? " — " : ":")}
-                        </>
-                      ) : (
-                        sol
-                      )}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
 
-          {/* Capabilities Column */}
-          <div className="rounded-2xl border border-border/40 bg-surface/10 p-6 shadow-sm hover:border-primary/25 transition-all duration-300">
-            <h3 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border/30 flex items-center gap-2.5">
-              <Cpu className="h-5 w-5 text-blue-500" />
+  return (
+    <div className="py-16 bg-background space-y-16">
+      <div className="mx-auto max-w-7xl px-6 space-y-16">
+
+        {/* 1. Core Capabilities Section (4-Column Badges/Chips) */}
+        <div className="space-y-6">
+          <div className="border-b border-border/40 pb-4">
+            <h3 className="text-base md:text-lg font-bold font-display text-foreground flex items-center gap-2">
+              <Cpu className="h-4.5 w-4.5 text-primary" />
               Core Capabilities
             </h3>
-            <ul className="space-y-3.5">
-              {data.capabilities.map((cap, i) => (
-                <li key={i} className="flex items-start gap-2.5">
-                  <span className="text-blue-500 mt-0.5 shrink-0 text-sm">✓</span>
-                  <span className="text-muted-foreground text-sm leading-relaxed">{cap}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">Our core technical skills and engineering disciplines in this domain.</p>
           </div>
-
-          {/* Use Cases Column */}
-          <div className="rounded-2xl border border-border/40 bg-surface/10 p-6 shadow-sm hover:border-primary/25 transition-all duration-300">
-            <h3 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border/30 flex items-center gap-2.5">
-              <BarChart3 className="h-5 w-5 text-emerald-500" />
-              Production Use Cases
-            </h3>
-            {data.id === "ai-infrastructure" ? (
-              <div className="space-y-5">
-                <div>
-                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-accent mb-2">Platform & Inference Operations</h4>
-                  <ul className="space-y-2">
-                    {data.useCases.slice(0, 15).map((uc, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-emerald-500 text-xs mt-1.5">●</span>
-                        <span className="text-muted-foreground text-sm leading-relaxed">{uc}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {data.capabilities.map((cap, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 p-3.5 rounded-xl border border-border bg-surface/30 hover:border-primary/20 hover:bg-surface-elevated/45 transition-all duration-300"
+              >
+                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <CheckCircle2 className="h-3 w-3" />
                 </div>
-                <div className="border-t border-border/30 pt-3">
-                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-accent mb-2">Energy Optimization</h4>
-                  <ul className="space-y-2">
-                    {data.useCases.slice(15, 17).map((uc, i) => {
-                      const cleanUc = uc.replace("Energy Optimization: ", "");
-                      return (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-emerald-500 text-xs mt-1.5">●</span>
-                          <span className="text-muted-foreground text-sm leading-relaxed">{cleanUc}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-                <div className="border-t border-border/30 pt-3">
-                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-accent mb-2">I/O Optimization</h4>
-                  <ul className="space-y-2">
-                    {data.useCases.slice(17, 19).map((uc, i) => {
-                      const cleanUc = uc.replace("I/O Optimization: ", "");
-                      return (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-emerald-500 text-xs mt-1.5">●</span>
-                          <span className="text-muted-foreground text-sm leading-relaxed">{cleanUc}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-                <div className="border-t border-border/30 pt-3">
-                  <h4 className="text-[11px] font-bold uppercase tracking-widest text-accent mb-2">Memory Optimization</h4>
-                  <ul className="space-y-2">
-                    {data.useCases.slice(19, 20).map((uc, i) => {
-                      const cleanUc = uc.replace("Memory Optimization: ", "");
-                      return (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-emerald-500 text-xs mt-1.5">●</span>
-                          <span className="text-muted-foreground text-sm leading-relaxed">{cleanUc}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
+                <span className="text-xs md:text-sm font-semibold text-foreground leading-snug">{cap}</span>
               </div>
-            ) : (
-              <ul className="space-y-3">
-                {data.useCases.map((uc, i) => {
-                  const parts = uc.split(":");
-                  return (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="text-emerald-500 text-xs mt-1.5">●</span>
-                      <span className="text-muted-foreground text-sm leading-relaxed">
-                        {parts.length > 1 ? (
-                          <>
-                            <strong className="text-foreground font-semibold">{parts[0]}</strong>
-                            {":"}
-                            {parts.slice(1).join(":")}
-                          </>
-                        ) : (
-                          uc
-                        )}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+            ))}
           </div>
         </div>
+
+        {/* 2. Technical Solutions Section (2-Column Premium Cards) */}
+        <div className="space-y-6">
+          <div className="border-b border-border/40 pb-4">
+            <h3 className="text-base md:text-lg font-bold font-display text-foreground flex items-center gap-2">
+              <Zap className="h-4.5 w-4.5 text-accent" />
+              Technical Solutions
+            </h3>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">Specific systems, frameworks, and software optimizations we engineer.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {data.solutions.map((sol, i) => {
+              const hasSep = sol.includes(" — ");
+              const parts = hasSep ? sol.split(" — ") : sol.split(":");
+              const title = parts[0];
+              const desc = parts.slice(1).join(hasSep ? " — " : ":");
+              return (
+                <div
+                  key={i}
+                  className="premium-card p-6 bg-white border border-border/60 hover:border-accent/25 hover:shadow-[0_12px_24px_-8px_rgba(var(--primary),0.03)] rounded-2xl relative overflow-hidden group transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div>
+                    <h4 className="text-sm md:text-base font-bold text-foreground tracking-tight mb-2 group-hover:text-primary transition-colors font-display">
+                      {title}
+                    </h4>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      {desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 3. Advisory Services Section (If present, 2-Column Premium Cards) */}
+        {hasAdvisory && (
+          <div className="space-y-6">
+            <div className="border-b border-border/40 pb-4">
+              <h3 className="text-base md:text-lg font-bold font-display text-foreground flex items-center gap-2">
+                <Globe className="h-4.5 w-4.5 text-amber-500" />
+                Advisory Services
+              </h3>
+              <p className="text-xs md:text-sm text-muted-foreground mt-1">Strategic consulting, audits, and power-grid interconnection workshops.</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {data.advisory!.map((adv, i) => {
+                const parts = adv.split(":");
+                const title = parts[0];
+                const desc = parts.slice(1).join(":");
+                return (
+                  <div
+                    key={i}
+                    className="premium-card p-6 bg-white border border-border/60 hover:border-amber-500/25 hover:shadow-[0_12px_24px_-8px_rgba(245,158,11,0.03)] rounded-2xl relative overflow-hidden group transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div>
+                      <h4 className="text-sm md:text-base font-bold text-foreground tracking-tight mb-2 group-hover:text-amber-600 transition-colors font-display">
+                        {title}
+                      </h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        {desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* 4. Production Use Cases Section (3-Column Minimal Cards Grid) */}
+        <div className="space-y-6">
+          <div className="border-b border-border/40 pb-4">
+            <h3 className="text-base md:text-lg font-bold font-display text-foreground flex items-center gap-2">
+              <BarChart3 className="h-4.5 w-4.5 text-emerald-500" />
+              Production Use Cases
+            </h3>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">Proven applications and architectural pipelines deployed for clients.</p>
+          </div>
+
+          {data.id === "ai-infrastructure" ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "Platform & Inference Operations", items: data.useCases.slice(0, 15) },
+                { title: "Energy Optimization", items: data.useCases.slice(15, 17), prefix: "Energy Optimization: " },
+                { title: "I/O Optimization", items: data.useCases.slice(17, 19), prefix: "I/O Optimization: " },
+                { title: "Memory Optimization", items: data.useCases.slice(19, 20), prefix: "Memory Optimization: " },
+              ].map((section, sidx) => (
+                <div key={sidx} className="p-5 border border-border bg-surface/15 rounded-2xl space-y-4 shadow-sm">
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-accent font-display border-b border-border/40 pb-2">
+                    {section.title}
+                  </h4>
+                  <ul className="space-y-3">
+                    {section.items.map((uc, i) => {
+                      const cleanUc = section.prefix ? uc.replace(section.prefix, "") : uc;
+                      return (
+                        <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-muted-foreground leading-relaxed">
+                          <span className="text-emerald-500 font-bold shrink-0 mt-0.5">•</span>
+                          <span>{cleanUc}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {data.useCases.map((uc, i) => {
+                const parts = uc.split(":");
+                const hasLabel = parts.length > 1 && parts[0].length < 60;
+                const title = hasLabel ? parts[0] : "";
+                const body = hasLabel ? parts.slice(1).join(":") : uc;
+
+                return (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 p-5 rounded-2xl border border-border bg-surface/15 hover:bg-surface-elevated/45 hover:border-emerald-500/20 transition-all duration-200 shadow-sm"
+                  >
+                    <span className="text-emerald-500 text-base font-bold shrink-0 mt-0.5">•</span>
+                    <div className="text-xs md:text-sm leading-relaxed text-muted-foreground">
+                      {hasLabel ? (
+                        <>
+                          <strong className="text-foreground font-semibold font-display block mb-1">{title}</strong>
+                          {body}
+                        </>
+                      ) : (
+                        uc
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
       </div>
     </div>
   );
