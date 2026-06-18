@@ -560,68 +560,64 @@ function SolutionsPage() {
                     </div>
                   </div>
 
-                  {/* Subcategories grid: full width, 3 or 4 columns based on length */}
-                  <div className={`grid gap-6 md:grid-cols-2 ${cat.subcategories.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
+                  {/* Subcategories Stack */}
+                  <div className="space-y-12 mt-8">
                     {cat.subcategories.map((sub, subIdx) => {
                       const dotIdx = sub.title.indexOf(" ");
                       const indexBadge = dotIdx >= 0 ? sub.title.slice(0, dotIdx) : "";
                       const displayTitle = dotIdx >= 0 ? sub.title.slice(dotIdx + 1) : sub.title;
 
+                      const gridCols = sub.points.length === 2
+                        ? "grid-cols-1 md:grid-cols-2"
+                        : sub.points.length === 3
+                        ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";
+
                       return (
-                        <div
-                          key={subIdx}
-                          className={`premium-card p-6 bg-card flex flex-col justify-between h-full relative overflow-hidden group border border-border/80 ${theme.borderHover} ${theme.glowHover} transition-all duration-300`}
-                        >
-                          {/* Colored top accent line */}
-                          <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-current to-transparent opacity-40 transition-colors duration-300 ${theme.accent}`} />
-                          
-                          <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-slate-50/20 opacity-100 pointer-events-none" />
-                          
-                          <div className="relative z-10 flex flex-col justify-between h-full w-full">
-                            <div>
-                              {/* Card subcategory index and title */}
-                              <div className="flex items-center gap-3 mb-6 border-b border-border/45 pb-4">
-                                {indexBadge && (
-                                  <span className={`text-base font-mono font-bold px-2 py-0.5 rounded-md border ${theme.badgeBg} ${theme.badgeText} shadow-sm leading-none shrink-0 transition-colors duration-300`}>
-                                    {indexBadge}
-                                  </span>
-                                )}
-                                <h4 className="text-base font-bold text-foreground tracking-tight leading-snug group-hover:text-primary transition-colors duration-250">
-                                  {displayTitle}
-                                </h4>
-                              </div>
-                              
-                              {/* Points block formatting */}
-                              <ul className="space-y-2.5">
-                                {sub.points.map((pt, ptIdx) => {
-                                  const dashIdx = pt.indexOf(" — ");
-                                  const titleText = dashIdx >= 0 ? pt.slice(0, dashIdx) : pt;
-                                  const descText = dashIdx >= 0 ? pt.slice(dashIdx + 3) : "";
-                                  return (
-                                    <li
-                                      key={ptIdx}
-                                      className="group/item flex gap-3 items-start p-2.5 rounded-lg hover:bg-slate-50/80 transition-all duration-200 border border-transparent hover:border-border/40 hover:shadow-[0_2px_6px_rgba(0,0,0,0.015)]"
-                                    >
-                                      {/* Beautiful modern dot bullet indicator */}
-                                      <div className="mt-2 shrink-0">
-                                        <div className={`h-1.5 w-1.5 rounded-full ${theme.dotColor} opacity-30 group-hover/item:opacity-100 transition-opacity duration-200`} />
-                                      </div>
-                                      
-                                      <div className="flex flex-col items-start gap-0.5">
-                                        <span className="text-base font-bold text-foreground/90 tracking-tight group-hover/item:text-primary transition-colors duration-200">
-                                          {titleText}
-                                        </span>
-                                        {descText && (
-                                          <span className="text-base text-muted-foreground leading-relaxed">
-                                            {descText}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            </div>
+                        <div key={subIdx} className="space-y-5">
+                          {/* Subcategory Title */}
+                          <div className="flex items-center gap-3 border-b border-border/40 pb-3">
+                            {indexBadge && (
+                              <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border ${theme.badgeBg} ${theme.badgeText} shadow-sm leading-none shrink-0 transition-colors duration-300`}>
+                                {indexBadge}
+                              </span>
+                            )}
+                            <h4 className="text-base md:text-lg font-bold text-foreground tracking-tight font-display">
+                              {displayTitle}
+                            </h4>
+                          </div>
+
+                          {/* Points Grid */}
+                          <div className={`grid gap-5 ${gridCols}`}>
+                            {sub.points.map((pt, ptIdx) => {
+                              const dashIdx = pt.indexOf(" — ");
+                              const titleText = dashIdx >= 0 ? pt.slice(0, dashIdx) : pt;
+                              const descText = dashIdx >= 0 ? pt.slice(dashIdx + 3) : "";
+
+                              return (
+                                <div
+                                  key={ptIdx}
+                                  className={`premium-card p-5.5 bg-white flex flex-col justify-between rounded-xl border border-border/80 ${theme.borderHover} ${theme.glowHover} transition-all duration-300 relative overflow-hidden group`}
+                                >
+                                  {/* Colored top accent line on hover */}
+                                  <div className={`absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-current to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-300 ${theme.accent}`} />
+
+                                  <div className="space-y-2.5 relative z-10">
+                                    <div className="flex items-center gap-2">
+                                      <div className={`h-1.5 w-1.5 rounded-full shrink-0 ${theme.dotColor}`} />
+                                      <h5 className="font-bold text-foreground tracking-tight font-display text-sm md:text-[15px] group-hover:text-primary transition-colors">
+                                        {titleText}
+                                      </h5>
+                                    </div>
+                                    {descText && (
+                                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                                        {descText}
+                                      </p>
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
                       );
