@@ -59,7 +59,7 @@ const keyIndustries = [
     name: "Media & Services",
     desc: "Personalized training platforms, media content generation/moderation, and aviation logistics.",
     roles: ["Media & Ent.", "Tourism", "Aviation", "Education", "Agri & Allied"],
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
   },
 ];
 

@@ -131,9 +131,7 @@ export function Footer() {
           <div className="lg:col-span-3 sm:col-span-4 flex flex-col justify-between">
             <div>
               <Link to="/" className="flex items-center mb-4">
-                <span className="font-display text-base font-semibold">
-                  TRUSTGRID<span className="text-accent">.AI</span>
-                </span>
+                <img src="/logo.png" alt="TrustGrid.AI Logo" className="h-10 w-auto object-contain" />
               </Link>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                 Full-Spectrum AI Engineering — GPU kernels to autonomous enterprises, built for reliability and Zero-Trust safety.

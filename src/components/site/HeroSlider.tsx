@@ -458,12 +458,12 @@ export function HeroSlider({
           src={slide.bgImage}
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: 0.25 }}
+          style={{ opacity: 0.50 }}
           draggable={false}
         />
 
         {/* Subtle white overlay for readability */}
-        <div className="absolute inset-0 bg-white/60" />
+        <div className="absolute inset-0 bg-white/40" />
 
         {/* Controls removed as requested */}
 
