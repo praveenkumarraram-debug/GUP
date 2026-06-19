@@ -556,10 +556,10 @@ function HomeDropdown() {
             href={item.href}
             className="flex items-center gap-2.5 py-1 px-1 rounded-md hover:bg-primary/[0.03] group/item transition-all"
           >
-            <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">
+            <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">
               →
             </span>
-            <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans tracking-wide">
+            <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-tight font-sans tracking-wide">
               {item.label}
             </span>
           </SectionLink>
@@ -577,7 +577,7 @@ function OfferingsDropdown() {
           <div key={cat.title} className="flex flex-col">
             <SectionLink
               href={cat.href}
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {cat.title}
             </SectionLink>
@@ -588,10 +588,10 @@ function OfferingsDropdown() {
                   href={item.href}
                   className="flex items-start gap-2 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
+                  <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
                     →
                   </span>
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -612,7 +612,7 @@ function IndustriesDropdown() {
           <div key={segment.title} className="flex flex-col">
             <SectionLink
               href="/industries"
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {segment.title}
             </SectionLink>
@@ -623,8 +623,8 @@ function IndustriesDropdown() {
                   href={item.href}
                   className="flex items-start gap-2.5 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <item.icon className="h-3.5 w-3.5 text-muted-foreground/60 group-hover/item:text-primary transition-colors shrink-0 mt-0.5" />
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <item.icon className="h-3.5 w-3.5 text-slate-500 group-hover/item:text-blue-600 transition-colors shrink-0 mt-0.5" />
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -645,7 +645,7 @@ function SolutionsDropdown() {
           <div key={cat.title} className="flex flex-col">
             <SectionLink
               href={cat.href}
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {cat.title}
             </SectionLink>
@@ -656,10 +656,10 @@ function SolutionsDropdown() {
                   href={item.href}
                   className="flex items-start gap-2 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
+                  <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
                     →
                   </span>
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -680,7 +680,7 @@ function CapabilitiesDropdown() {
           <div key={cat.title} className="flex flex-col">
             <SectionLink
               href={cat.href}
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {cat.title}
             </SectionLink>
@@ -691,10 +691,10 @@ function CapabilitiesDropdown() {
                   href={item.href}
                   className="flex items-start gap-2 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
+                  <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px] mt-0.5">
                     →
                   </span>
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -715,7 +715,7 @@ function UseCasesDropdown() {
           <div key={cat.title} className="flex flex-col">
             <SectionLink
               href={cat.href}
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {cat.title}
             </SectionLink>
@@ -726,10 +726,10 @@ function UseCasesDropdown() {
                   href={item.href}
                   className="flex items-center gap-2 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px]">
+                  <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px]">
                     →
                   </span>
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -750,7 +750,7 @@ function PlatformDropdown() {
           <div key={cat.title} className="flex flex-col">
             <SectionLink
               href={cat.href}
-              className="text-xs font-bold text-foreground hover:text-primary transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
+              className="text-xs font-extrabold text-slate-900 hover:text-blue-600 transition-colors tracking-wider mb-3 block border-b border-border/30 pb-2"
             >
               {cat.title}
             </SectionLink>
@@ -761,10 +761,10 @@ function PlatformDropdown() {
                   href={item.href}
                   className="flex items-center gap-2 py-0.5 px-0.5 rounded-md hover:bg-primary/[0.03] group/item transition-all"
                 >
-                  <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px]">
+                  <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0 text-[10px]">
                     →
                   </span>
-                  <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -787,10 +787,10 @@ function AboutDropdown() {
             href={item.href}
             className="flex items-center gap-2.5 py-1 px-1 rounded-md hover:bg-primary/[0.03] group/item transition-all"
           >
-            <span className="text-accent font-semibold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">
+            <span className="text-blue-500 font-bold transition-transform duration-200 group-hover/item:translate-x-0.5 shrink-0">
               →
             </span>
-            <span className="text-xs font-medium text-muted-foreground group-hover/item:text-foreground transition-colors leading-tight font-sans tracking-wide">
+            <span className="text-xs font-semibold text-slate-700 group-hover/item:text-blue-600 transition-colors leading-tight font-sans tracking-wide">
               {item.label}
             </span>
           </SectionLink>
@@ -828,8 +828,8 @@ function NavItem({ label, to, children }: NavItemProps) {
     return (
       <Link
         to={to}
-        className="text-sm font-medium text-foreground transition-colors hover:text-primary px-3.5 py-2 rounded-md whitespace-nowrap"
-        activeProps={{ className: "text-foreground bg-surface/50 px-3.5 py-2 rounded-md font-medium" }}
+        className="text-sm font-bold text-slate-800 transition-colors hover:text-blue-600 px-3.5 py-2 rounded-md whitespace-nowrap"
+        activeProps={{ className: "text-blue-600 bg-blue-50/50 px-3.5 py-2 rounded-md font-bold" }}
       >
         {label}
       </Link>
@@ -845,8 +845,8 @@ function NavItem({ label, to, children }: NavItemProps) {
     >
       <Link
         to={to}
-        className="text-sm font-medium text-foreground transition-colors hover:text-primary px-3.5 py-2 rounded-md whitespace-nowrap"
-        activeProps={{ className: "text-foreground bg-surface/50 px-3.5 py-2 rounded-md font-medium" }}
+        className="text-sm font-bold text-slate-800 transition-colors hover:text-blue-600 px-3.5 py-2 rounded-md whitespace-nowrap"
+        activeProps={{ className: "text-blue-600 bg-blue-50/50 px-3.5 py-2 rounded-md font-bold" }}
       >
         {label}
       </Link>
@@ -880,18 +880,18 @@ function MobileAccordion({ title, to, children, onClose }: MobileAccordionProps)
   return (
     <div className="border-b border-border/30 last:border-0">
       <button
-        className="w-full flex items-center justify-between py-3.5 text-sm font-semibold text-foreground"
+        className="w-full flex items-center justify-between py-3.5 text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors"
         onClick={() => setOpen((v) => !v)}
       >
         {title}
-        <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <ChevronDown className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
         <div className="pb-3 pl-2">
           <Link
             to={to}
             onClick={onClose}
-            className="block py-2 text-xs font-medium text-accent hover:text-foreground transition-colors"
+            className="block py-2 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
             View all →
           </Link>
@@ -1016,7 +1016,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="block py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                     >
                       {item.label}
                     </SectionLink>
@@ -1031,7 +1031,7 @@ export function Header() {
                       <SectionLink
                         href={cat.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-[10px] font-bold tracking-wider text-accent pl-1"
+                        className="block text-[10px] font-bold tracking-wider text-blue-600 pl-1"
                       >
                         {cat.title}
                       </SectionLink>
@@ -1041,7 +1041,7 @@ export function Header() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block py-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            className="block py-1 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                           >
                             {item.label}
                           </SectionLink>
@@ -1059,7 +1059,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="block py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                     >
                       {item.label}
                     </SectionLink>
@@ -1074,7 +1074,7 @@ export function Header() {
                       <SectionLink
                         href={cat.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-[10px] font-bold tracking-wider text-accent pl-1"
+                        className="block text-[10px] font-bold tracking-wider text-blue-600 pl-1"
                       >
                         {cat.title}
                       </SectionLink>
@@ -1084,7 +1084,7 @@ export function Header() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block py-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            className="block py-1 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                           >
                             {item.label}
                           </SectionLink>
@@ -1102,7 +1102,7 @@ export function Header() {
                       <SectionLink
                         href={cat.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-[10px] font-bold tracking-wider text-accent pl-1"
+                        className="block text-[10px] font-bold tracking-wider text-blue-600 pl-1"
                       >
                         {cat.title}
                       </SectionLink>
@@ -1112,7 +1112,7 @@ export function Header() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block py-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            className="block py-1 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                           >
                             {item.label}
                           </SectionLink>
@@ -1130,7 +1130,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="block py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                     >
                       {item.label}
                     </SectionLink>
@@ -1145,7 +1145,7 @@ export function Header() {
                       <SectionLink
                         href={cat.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-[10px] font-bold tracking-wider text-accent pl-1"
+                        className="block text-[10px] font-bold tracking-wider text-blue-600 pl-1"
                       >
                         {cat.title}
                       </SectionLink>
@@ -1155,7 +1155,7 @@ export function Header() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block py-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            className="block py-1 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                           >
                             {item.label}
                           </SectionLink>
@@ -1173,7 +1173,7 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      className="block py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 transition-colors"
                     >
                       {item.label}
                     </SectionLink>
