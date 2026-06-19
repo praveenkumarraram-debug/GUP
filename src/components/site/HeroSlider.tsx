@@ -943,12 +943,23 @@ export interface SlideData {
   cta?: string;
 }
 
+const GPU_IMAGES = [
+  "/images/gpu_h100_cluster.png",
+  "/images/gpu_silicon_die.png",
+  "/images/gpu_liquid_cooled_server.png",
+  "/images/gpu_interconnect_mesh.png",
+  "/images/gpu_cluster_1_1781677642098.png",
+  "/images/gpu_cluster_2_1781677654723.png",
+  "/images/gpu_server_rack_1781677667839.png",
+  "/images/ai_processor_node_1781677682371.png",
+];
+
 // Map old slides format to the new specifications dynamically
 function getSlidesForType(type: string): SlideData[] {
   const data = slidersData[type];
   if (!data) return [];
 
-  return data.slides.map((slide) => {
+  return data.slides.map((slide, idx) => {
     let title = "Accelerating ";
     let highlight = slide.role;
     let titleEnd = " for Enterprise AI";
@@ -1002,13 +1013,15 @@ function getSlidesForType(type: string): SlideData[] {
       titleEnd = " & Data Quality";
     }
 
+    const gpuImage = GPU_IMAGES[idx % GPU_IMAGES.length];
+
     return {
       badge: slide.role,
       title: title,
       highlight: highlight,
       titleEnd: titleEnd,
       description: slide.problem,
-      image: slide.bgImage,
+      image: gpuImage,
       icp: slide.attn,
       outcome: slide.outcome,
       cta: slide.cta,
