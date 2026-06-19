@@ -935,7 +935,7 @@ export function Header() {
 
           {/* Brand */}
           <Link to="/" className="flex items-center group mr-6 shrink-0">
-            <img src="/logo.png" alt="TrustGrid.AI Logo" className="h-8 w-auto object-contain" />
+            <img src="/logo.png" alt="TrustGrid.AI Logo" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
