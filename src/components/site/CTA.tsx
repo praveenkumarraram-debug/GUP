@@ -31,8 +31,8 @@ export function CTA() {
         {/* Three Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-14">
           {/* Card 1: Free Consultation */}
-          <div className="flex flex-col items-center justify-between p-8 bg-slate-50/70 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="flex flex-col items-center text-center">
+          <div className="premium-card flex flex-col items-center justify-between p-8 text-center">
+            <div className="flex flex-col items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-5">
                 <Calendar className="h-6 w-6" />
               </div>
@@ -51,8 +51,8 @@ export function CTA() {
           </div>
 
           {/* Card 2: Request Demo */}
-          <div className="flex flex-col items-center justify-between p-8 bg-slate-50/70 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="flex flex-col items-center text-center">
+          <div className="premium-card flex flex-col items-center justify-between p-8 text-center">
+            <div className="flex flex-col items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-500 mb-5">
                 <FileText className="h-6 w-6" />
               </div>
@@ -71,8 +71,8 @@ export function CTA() {
           </div>
 
           {/* Card 3: Case Studies */}
-          <div className="flex flex-col items-center justify-between p-8 bg-slate-50/70 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-            <div className="flex flex-col items-center text-center">
+          <div className="premium-card flex flex-col items-center justify-between p-8 text-center">
+            <div className="flex flex-col items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 mb-5">
                 <BookOpen className="h-6 w-6" />
               </div>
@@ -94,7 +94,7 @@ export function CTA() {
         {/* Bottom Giant Button */}
         <div className="flex justify-center">
           <Link to="/contact">
-            <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:scale-[1.02] text-white font-bold rounded-2xl text-sm shadow-lg shadow-blue-500/20 transition-all duration-300 cursor-pointer">
+            <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:scale-[1.02] text-white font-bold rounded-2xl text-sm shadow-lg shadow-blue-500/20 transition-all duration-300 cursor-pointer bg-[length:200%_200%] animate-gradient-flow">
               Start Your Transformation Journey
               <ArrowRight className="h-4 w-4" />
             </button>

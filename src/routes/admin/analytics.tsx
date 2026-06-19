@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Lock,
   RefreshCw,
@@ -14,7 +15,9 @@ import {
   Search,
   ArrowLeft,
   Activity,
-  UserCheck
+  UserCheck,
+  Mail,
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

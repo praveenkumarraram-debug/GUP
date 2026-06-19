@@ -13,6 +13,8 @@ import {
   Activity,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NeuralBackground } from "./NeuralBackground";
+
 
 export interface SlideItem {
   attn: string;
@@ -1127,6 +1129,11 @@ export function HeroSlider({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* Neural node canvas backdrop */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <NeuralBackground density={40} />
+      </div>
+
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="popLayout" initial={false}>
@@ -1214,7 +1221,7 @@ export function HeroSlider({
                 to="/contact"
                 search={{ subject: `Strategy Session: ${slide.icp || slide.badge}`, cta: slide.cta }}
               >
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl text-sm font-bold shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02] duration-300">
+                <button className="px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white rounded-2xl text-sm font-bold shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02] duration-300 bg-[length:200%_200%] animate-gradient-flow cursor-pointer">
                   {slide.cta}
                 </button>
               </Link>
