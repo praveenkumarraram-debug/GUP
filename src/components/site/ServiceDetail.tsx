@@ -24,6 +24,7 @@ export interface ServiceDetailProps {
   detailedOfferings?: OfferingDetail[];
   sliderType?: "home" | "gpu" | "llm" | "security" | "infrastructure" | "reliability";
   bgImages?: string[];
+  children?: React.ReactNode;
 }
 
 export function ServiceDetail({
@@ -36,6 +37,7 @@ export function ServiceDetail({
   detailedOfferings,
   sliderType,
   bgImages,
+  children,
 }: ServiceDetailProps) {
   return (
     <>
@@ -222,6 +224,8 @@ export function ServiceDetail({
           </div>
         </div>
       </section>
+
+      {children}
 
       <CTA />
     </>

@@ -100,7 +100,6 @@ export function Footer() {
   return (
     <footer id="site-footer" className="border-t border-border/40 bg-surface/20">
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-10">
-
         {/* Featured Offerings Strip */}
         <div className="mb-14 pb-10 border-b border-border/30">
           <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground mb-5">
@@ -130,17 +129,22 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-3 sm:col-span-4 flex flex-col justify-between">
             <div>
-              <Link to="/" className="flex items-center mb-4">
-                <img src="/logo.png" alt="TrustGrid.AI Logo" className="h-16 w-auto object-contain" />
+              <Link to="/" className="flex items-center mb-4 group">
+                <img
+                  src="/logo.png"
+                  alt="TrustGrid.AI Logo"
+                  className="h-16 w-auto object-contain brightness-[2.8] contrast-[1.15] saturate-[1.3] transition-all duration-300 group-hover:brightness-[3.2]"
+                />
               </Link>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                Full-Spectrum AI Engineering — GPU kernels to autonomous enterprises, built for reliability and Zero-Trust safety.
+                Full-Spectrum AI Engineering — GPU kernels to autonomous enterprises, built for
+                reliability and Zero-Trust safety.
               </p>
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <MapPin className="h-3.5 w-3.5 shrink-0 text-accent/60" />
-                5 Global Operations Offices
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-accent/60" />5 Global Operations
+                Offices
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-accent/60" />
@@ -174,18 +178,31 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div id="site-footer-bottom" className="pt-8 border-t border-border/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div
+          id="site-footer-bottom"
+          className="pt-8 border-t border-border/30 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4"
+        >
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs text-muted-foreground">
             <span>© {new Date().getFullYear()} TrustGrid.AI. All rights reserved.</span>
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link to="/security" className="hover:text-foreground transition-colors">Security</Link>
-            <Link to="/copyright" className="hover:text-foreground transition-colors">Copyright & Trademarks</Link>
-            <Link to="/cookies" className="hover:text-foreground transition-colors">Cookies</Link>
-            <a 
-              href="/sitemap.xml" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <Link to="/privacy" className="hover:text-foreground transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">
+              Terms of Service
+            </Link>
+            <Link to="/security" className="hover:text-foreground transition-colors">
+              Security
+            </Link>
+            <Link to="/copyright" className="hover:text-foreground transition-colors">
+              Copyright & Trademarks
+            </Link>
+            <Link to="/cookies" className="hover:text-foreground transition-colors">
+              Cookies
+            </Link>
+            <a
+              href="/sitemap.xml"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-foreground transition-colors flex items-center gap-0.5"
             >
               Sitemap <ExternalLink className="h-3 w-3 shrink-0 opacity-60" />
@@ -195,7 +212,10 @@ export function Footer() {
             <p className="text-xs text-muted-foreground hidden sm:block">
               GPU · AI Agents · LLM/RAG · Cybersecurity
             </p>
-            <Link to="/contact" className="text-xs text-accent hover:text-foreground transition-colors font-medium">
+            <Link
+              to="/contact"
+              className="text-xs text-accent hover:text-foreground transition-colors font-medium"
+            >
               Book a Session →
             </Link>
           </div>

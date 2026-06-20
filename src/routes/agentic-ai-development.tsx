@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail, OfferingDetail } from "@/components/site/ServiceDetail";
+import { OptimizationMatrix } from "@/components/site/OptimizationMatrix";
+import { PartnerSection } from "@/components/site/PartnerSection";
+import { agenticOptimizationOfferings } from "@/data/optimization-offerings";
 
 const detailedOfferings: OfferingDetail[] = [
   {
@@ -80,6 +83,13 @@ export const Route = createFileRoute("/agentic-ai-development")({
       ]}
       stack={["LangGraph", "CrewAI", "AutoGen", "OpenAI Agents SDK", "MCP", "LangSmith", "Ray"]}
       detailedOfferings={detailedOfferings}
-    />
+    >
+      <OptimizationMatrix
+        title="Agentic AI Optimization (Software-Level)"
+        description="As AI systems transition from passive responders to autonomous agents, software-level orchestration becomes critical. We optimize multi-agent pipelines, reducing compute waste and accelerating decision cycles."
+        offerings={agenticOptimizationOfferings}
+      />
+      <PartnerSection />
+    </ServiceDetail>
   ),
 });

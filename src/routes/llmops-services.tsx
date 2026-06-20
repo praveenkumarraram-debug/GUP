@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { PageHero } from "@/components/site/PageHero";
 import { CTA } from "@/components/site/CTA";
 import { HeroSlider } from "@/components/site/HeroSlider";
+import { OptimizationMatrix } from "@/components/site/OptimizationMatrix";
+import { PartnerSection } from "@/components/site/PartnerSection";
+import { llmOptimizationOfferings } from "@/data/optimization-offerings";
 import {
   CheckCircle2,
   ChevronRight,
@@ -948,6 +951,14 @@ function LlmOpsPage() {
       </div>
 
       <CrossCuttingSection />
+
+      <OptimizationMatrix
+        title="LLM Optimization Offerings"
+        description="Our LLM optimization services target the fundamental physics of large language model inference, driving down cost per million tokens while maximizing hardware utilization and preserving model quality."
+        offerings={llmOptimizationOfferings}
+      />
+
+      <PartnerSection />
 
       <CTA />
     </>

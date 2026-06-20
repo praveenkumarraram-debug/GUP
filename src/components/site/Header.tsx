@@ -1,6 +1,57 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, ChevronRight, Cpu, Bot, Brain, Shield, LayoutGrid, Layers, Zap, Globe, BarChart3, Server, FileText, Users, Phone, BookOpen, Car, Wrench, Settings, Home, Laptop, FlaskConical, Hammer, Building2, Milestone, Droplet, Sun, Anchor, Train, Landmark, Coins, ShoppingBag, Gem, Pill, HeartPulse, Stethoscope, Dna, Leaf, Package, Store, Tv, Scissors, Utensils, Film, Compass, Plane, GraduationCap, Sprout } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Cpu,
+  Bot,
+  Brain,
+  Shield,
+  LayoutGrid,
+  Layers,
+  Zap,
+  Globe,
+  BarChart3,
+  Server,
+  FileText,
+  Users,
+  Phone,
+  BookOpen,
+  Car,
+  Wrench,
+  Settings,
+  Home,
+  Laptop,
+  FlaskConical,
+  Hammer,
+  Building2,
+  Milestone,
+  Droplet,
+  Sun,
+  Anchor,
+  Train,
+  Landmark,
+  Coins,
+  ShoppingBag,
+  Gem,
+  Pill,
+  HeartPulse,
+  Stethoscope,
+  Dna,
+  Leaf,
+  Package,
+  Store,
+  Tv,
+  Scissors,
+  Utensils,
+  Film,
+  Compass,
+  Plane,
+  GraduationCap,
+  Sprout,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /* ─── Mega-Menu Data ─────────────────────────────────────────── */
@@ -46,20 +97,36 @@ const industrySegments = [
     items: [
       { label: "Automobiles", icon: Car, href: "/industries#manufacturing-industrial" },
       { label: "Auto Components", icon: Wrench, href: "/industries#manufacturing-industrial" },
-      { label: "Engineering & Capital Goods", icon: Settings, href: "/industries#manufacturing-industrial" },
-      { label: "Defence Manufacturing", icon: Shield, href: "/industries#manufacturing-industrial" },
+      {
+        label: "Engineering & Capital Goods",
+        icon: Settings,
+        href: "/industries#manufacturing-industrial",
+      },
+      {
+        label: "Defence Manufacturing",
+        icon: Shield,
+        href: "/industries#manufacturing-industrial",
+      },
       { label: "MSME", icon: Home, href: "/industries#manufacturing-industrial" },
-    ]
+    ],
   },
   {
     title: "Technology & Electronics",
     items: [
       { label: "IT & BPM", icon: Laptop, href: "/industries#telecommunications-network" },
-      { label: "Electronics & Semiconductor", icon: Cpu, href: "/industries#telecommunications-network" },
+      {
+        label: "Electronics & Semiconductor",
+        icon: Cpu,
+        href: "/industries#telecommunications-network",
+      },
       { label: "Telecommunications", icon: Phone, href: "/industries#telecommunications-network" },
-      { label: "Science & Technology", icon: FlaskConical, href: "/industries#telecommunications-network" },
+      {
+        label: "Science & Technology",
+        icon: FlaskConical,
+        href: "/industries#telecommunications-network",
+      },
       { label: "Electric Vehicles", icon: Zap, href: "/industries#telecommunications-network" },
-    ]
+    ],
   },
   {
     title: "Infrastructure & Construction",
@@ -68,8 +135,12 @@ const industrySegments = [
       { label: "Steel", icon: Hammer, href: "/industries#infrastructure-construction" },
       { label: "Infrastructure", icon: Building2, href: "/industries#infrastructure-construction" },
       { label: "Real Estate", icon: Home, href: "/industries#infrastructure-construction" },
-      { label: "Roads & Highways", icon: Milestone, href: "/industries#infrastructure-construction" },
-    ]
+      {
+        label: "Roads & Highways",
+        icon: Milestone,
+        href: "/industries#infrastructure-construction",
+      },
+    ],
   },
   {
     title: "Energy & Utilities",
@@ -79,7 +150,7 @@ const industrySegments = [
       { label: "Renewable Energy", icon: Sun, href: "/industries#energy-utilities-sustainability" },
       { label: "Ports", icon: Anchor, href: "/industries#energy-utilities-sustainability" },
       { label: "Railways", icon: Train, href: "/industries#energy-utilities-sustainability" },
-    ]
+    ],
   },
   {
     title: "Financial Services",
@@ -89,7 +160,7 @@ const industrySegments = [
       { label: "Insurance", icon: FileText, href: "/industries#banking-financial-services" },
       { label: "E-Commerce", icon: ShoppingBag, href: "/industries#banking-financial-services" },
       { label: "Gems & Jewellery", icon: Gem, href: "/industries#banking-financial-services" },
-    ]
+    ],
   },
   {
     title: "Healthcare & Life Sciences",
@@ -99,7 +170,7 @@ const industrySegments = [
       { label: "Medical Devices", icon: Stethoscope, href: "/industries#healthcare-life-sciences" },
       { label: "Biotechnology", icon: Dna, href: "/industries#healthcare-life-sciences" },
       { label: "Ayush", icon: Leaf, href: "/industries#healthcare-life-sciences" },
-    ]
+    ],
   },
   {
     title: "Consumer & Retail",
@@ -109,18 +180,34 @@ const industrySegments = [
       { label: "Consumer Durables", icon: Tv, href: "/industries#retail-e-commerce" },
       { label: "Textiles", icon: Scissors, href: "/industries#retail-e-commerce" },
       { label: "Food Processing", icon: Utensils, href: "/industries#retail-e-commerce" },
-    ]
+    ],
   },
   {
     title: "Media & Services",
     items: [
-      { label: "Media & Entertainment", icon: Film, href: "/industries#education-learning-platforms" },
-      { label: "Tourism & Hospitality", icon: Compass, href: "/industries#education-learning-platforms" },
+      {
+        label: "Media & Entertainment",
+        icon: Film,
+        href: "/industries#education-learning-platforms",
+      },
+      {
+        label: "Tourism & Hospitality",
+        icon: Compass,
+        href: "/industries#education-learning-platforms",
+      },
       { label: "Aviation", icon: Plane, href: "/industries#education-learning-platforms" },
-      { label: "Education & Training", icon: GraduationCap, href: "/industries#education-learning-platforms" },
-      { label: "Agriculture & Allied", icon: Sprout, href: "/industries#education-learning-platforms" },
-    ]
-  }
+      {
+        label: "Education & Training",
+        icon: GraduationCap,
+        href: "/industries#education-learning-platforms",
+      },
+      {
+        label: "Agriculture & Allied",
+        icon: Sprout,
+        href: "/industries#education-learning-platforms",
+      },
+    ],
+  },
 ];
 
 const solutionsItems = [
@@ -171,8 +258,8 @@ const offeringsCategories = [
       { label: "GPU Super Scaling", href: "/offerings#gpu-optimization" },
       { label: "Low Latency HPC Networking", href: "/offerings#gpu-optimization" },
       { label: "Memory Bandwidth Optimization", href: "/offerings#gpu-optimization" },
-      { label: "Inference Latency Reduction", href: "/offerings#gpu-optimization" }
-    ]
+      { label: "Inference Latency Reduction", href: "/offerings#gpu-optimization" },
+    ],
   },
   {
     title: "LLM Optimization",
@@ -181,38 +268,38 @@ const offeringsCategories = [
       { label: "PEFT/LoRA Fine-Tuning", href: "/offerings#llm-optimization" },
       { label: "Advanced RAG Pipelines", href: "/offerings#llm-optimization" },
       { label: "Autonomous Agent Frameworks", href: "/offerings#llm-optimization" },
-      { label: "Cost-Per-Token Optimization", href: "/offerings#llm-optimization" }
-    ]
+      { label: "Cost-Per-Token Optimization", href: "/offerings#llm-optimization" },
+    ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/offerings#ai-trust-reliability",
     items: [
-      { label: "Continuous Model Drift Detection", href: "/offerings#ai-trust-reliability" },
-      { label: "End-to-End LLM Observability Stack", href: "/offerings#ai-trust-reliability" },
-      { label: "AI Red-Teaming & Adversarial Tests", href: "/offerings#ai-trust-reliability" },
-      { label: "Automated CI/CD Retraining", href: "/offerings#ai-trust-reliability" }
-    ]
+      { label: "Model Drift Detection", href: "/offerings#ai-trust-reliability" },
+      { label: "LLM Observability Stack", href: "/offerings#ai-trust-reliability" },
+      { label: "AI Red-Teaming & Stress Tests", href: "/offerings#ai-trust-reliability" },
+      { label: "Automated CI/CD Retraining", href: "/offerings#ai-trust-reliability" },
+    ],
   },
   {
     title: "AI Cybersecurity",
     href: "/offerings#ai-cybersecurity",
     items: [
       { label: "Adversarial Robustness Testing", href: "/offerings#ai-cybersecurity" },
-      { label: "Confidential Computing for Inference", href: "/offerings#ai-cybersecurity" },
-      { label: "Prompt Injection Defense Mechanisms", href: "/offerings#ai-cybersecurity" },
-      { label: "Supply Chain Vulnerability Scanning", href: "/offerings#ai-cybersecurity" }
-    ]
+      { label: "Confidential GPU Inference", href: "/offerings#ai-cybersecurity" },
+      { label: "Prompt Injection Defenses", href: "/offerings#ai-cybersecurity" },
+      { label: "Supply Chain Scanning", href: "/offerings#ai-cybersecurity" },
+    ],
   },
   {
     title: "AI Infrastructure",
     href: "/offerings#ai-infrastructure",
     items: [
-      { label: "MLOps/LLMOps Pipeline Architecture", href: "/offerings#ai-infrastructure" },
-      { label: "Highly Available Vector Databases", href: "/offerings#ai-infrastructure" },
-      { label: "Kubernetes Workload Orchestration", href: "/offerings#ai-infrastructure" },
-      { label: "Energy & Storage Optimization", href: "/offerings#ai-infrastructure" }
-    ]
+      { label: "MLOps/LLMOps Architecture", href: "/offerings#ai-infrastructure" },
+      { label: "Highly Available Vector DBs", href: "/offerings#ai-infrastructure" },
+      { label: "Kubernetes Orchestration", href: "/offerings#ai-infrastructure" },
+      { label: "Energy & Storage Optimization", href: "/offerings#ai-infrastructure" },
+    ],
   },
   {
     title: "Energy Optimization",
@@ -221,9 +308,9 @@ const offeringsCategories = [
       { label: "GW-Scale Power Strategy", href: "/offerings#energy-optimization-hyperscale" },
       { label: "AI Thermal Cooling Transition", href: "/offerings#energy-optimization-hyperscale" },
       { label: "GPU & Fabric Energy Audit", href: "/offerings#energy-optimization-hyperscale" },
-      { label: "Next-Gen Power & Microgrid", href: "/offerings#energy-optimization-hyperscale" }
-    ]
-  }
+      { label: "Next-Gen Power & Microgrids", href: "/offerings#energy-optimization-hyperscale" },
+    ],
+  },
 ];
 
 const solutionsCategories = [
@@ -235,8 +322,8 @@ const solutionsCategories = [
       { label: "Low-Latency HPC Networking", href: "/solutions#gpu-optimization" },
       { label: "Memory Optimization", href: "/solutions#gpu-optimization" },
       { label: "Inference Speed Reduction", href: "/solutions#gpu-optimization" },
-      { label: "Multi-Tenant GPU Management", href: "/solutions#gpu-optimization" }
-    ]
+      { label: "Multi-Tenant GPU Management", href: "/solutions#gpu-optimization" },
+    ],
   },
   {
     title: "LLM Optimization",
@@ -246,8 +333,8 @@ const solutionsCategories = [
       { label: "Fine-Tuning (PEFT / LoRA)", href: "/solutions#llm-optimization" },
       { label: "Autonomous Agent Frameworks", href: "/solutions#llm-optimization" },
       { label: "Multi-Modal Model Integration", href: "/solutions#llm-optimization" },
-      { label: "Token Cost Optimization", href: "/solutions#llm-optimization" }
-    ]
+      { label: "Token Cost Optimization", href: "/solutions#llm-optimization" },
+    ],
   },
   {
     title: "AI Trust & Reliability",
@@ -257,8 +344,8 @@ const solutionsCategories = [
       { label: "LLM Observability Stack", href: "/solutions#ai-trust-reliability" },
       { label: "Red-Teaming & Stress Testing", href: "/solutions#ai-trust-reliability" },
       { label: "Automated Retraining Pipelines", href: "/solutions#ai-trust-reliability" },
-      { label: "SLA / SLO Enforcement", href: "/solutions#ai-trust-reliability" }
-    ]
+      { label: "SLA / SLO Enforcement", href: "/solutions#ai-trust-reliability" },
+    ],
   },
   {
     title: "AI Cybersecurity",
@@ -268,8 +355,8 @@ const solutionsCategories = [
       { label: "Confidential Computing", href: "/solutions#ai-cybersecurity" },
       { label: "Prompt Injection Defense", href: "/solutions#ai-cybersecurity" },
       { label: "Supply Chain Scanning", href: "/solutions#ai-cybersecurity" },
-      { label: "Data & Model Defense", href: "/solutions#ai-cybersecurity" }
-    ]
+      { label: "Data & Model Defense", href: "/solutions#ai-cybersecurity" },
+    ],
   },
   {
     title: "AI Infrastructure",
@@ -279,22 +366,25 @@ const solutionsCategories = [
       { label: "Vector Database Deployment", href: "/solutions#ai-infrastructure" },
       { label: "Kubernetes Orchestration", href: "/solutions#ai-infrastructure" },
       { label: "Microservices Design", href: "/solutions#ai-infrastructure" },
-      { label: "Storage Optimization", href: "/solutions#ai-infrastructure" }
-    ]
+      { label: "Storage Optimization", href: "/solutions#ai-infrastructure" },
+    ],
   },
   {
     title: "Energy Optimization",
     href: "/solutions#energy-optimization",
     items: [
-      { label: "GW-Scale Power & Capacity Strategy", href: "/solutions#energy-optimization" },
+      { label: "GW-Scale Power & Capacity", href: "/solutions#energy-optimization" },
       { label: "AI Thermal Cooling Transition", href: "/solutions#energy-optimization" },
-      { label: "GPU & Network Fabric Energy Audit", href: "/solutions#energy-optimization" },
+      { label: "GPU & Network Energy Audit", href: "/solutions#energy-optimization" },
       { label: "Sustainable AI & ESG Compliance", href: "/solutions#energy-optimization" },
       { label: "AI-Driven Facility Operations", href: "/solutions#energy-optimization" },
       { label: "Waste Heat Recovery & Monetization", href: "/solutions#energy-optimization" },
-      { label: "Next-Gen Power Architecture & Microgrid Design", href: "/solutions#energy-optimization" }
-    ]
-  }
+      {
+        label: "Next-Gen Power & Microgrid Design",
+        href: "/solutions#energy-optimization",
+      },
+    ],
+  },
 ];
 
 const capabilitiesCategories = [
@@ -303,33 +393,39 @@ const capabilitiesCategories = [
     href: "/capabilities#gpu-optimization",
     items: [
       { label: "GPU Super-Scaling & Orchestration", href: "/capabilities#gpu-optimization" },
-      { label: "Ultra-Low Latency HPC Network Fabric", href: "/capabilities#gpu-optimization" },
+      { label: "HPC Network Fabric Engineering", href: "/capabilities#gpu-optimization" },
       { label: "Real-Time Inference Acceleration", href: "/capabilities#gpu-optimization" },
       { label: "Custom CUDA/Triton Kernel Dev", href: "/capabilities#gpu-optimization" },
-      { label: "Energy-Efficient GPU Scheduling", href: "/capabilities#gpu-optimization" }
-    ]
+      { label: "Energy-Efficient GPU Scheduling", href: "/capabilities#gpu-optimization" },
+    ],
   },
   {
     title: "LLM Optimization",
     href: "/capabilities#llm-optimization",
     items: [
-      { label: "Domain-Specific LLM Adaptation & Alignment", href: "/capabilities#llm-optimization" },
-      { label: "Agentic Workflow & State Machine Design", href: "/capabilities#llm-optimization" },
-      { label: "Semantic Search & Retrieval Engineering", href: "/capabilities#llm-optimization" },
+      {
+        label: "Domain LLM Adaptation & Alignment",
+        href: "/capabilities#llm-optimization",
+      },
+      { label: "Agentic Workflow & State Design", href: "/capabilities#llm-optimization" },
+      { label: "Semantic Search & Retrieval Eng.", href: "/capabilities#llm-optimization" },
       { label: "Advanced Prompt Engineering", href: "/capabilities#llm-optimization" },
-      { label: "LLM Evaluation & Benchmarking", href: "/capabilities#llm-optimization" }
-    ]
+      { label: "LLM Evaluation & Benchmarking", href: "/capabilities#llm-optimization" },
+    ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/capabilities#ai-trust-reliability",
     items: [
-      { label: "Statistical Drift & Outlier Analysis", href: "/capabilities#ai-trust-reliability" },
-      { label: "Adversarial Prompt Resilience Testing", href: "/capabilities#ai-trust-reliability" },
+      { label: "Drift & Outlier Analysis", href: "/capabilities#ai-trust-reliability" },
+      {
+        label: "Adversarial Prompt Stress Testing",
+        href: "/capabilities#ai-trust-reliability",
+      },
       { label: "Deep Traceability & Lineage Tracking", href: "/capabilities#ai-trust-reliability" },
       { label: "Automated ML Pipeline Orchestration", href: "/capabilities#ai-trust-reliability" },
-      { label: "Chaos Engineering for Distributed AI", href: "/capabilities#ai-trust-reliability" }
-    ]
+      { label: "Chaos Engineering for Distributed AI", href: "/capabilities#ai-trust-reliability" },
+    ],
   },
   {
     title: "AI Cybersecurity",
@@ -339,8 +435,8 @@ const capabilitiesCategories = [
       { label: "Zero-Trust Architecture for ML APIs", href: "/capabilities#ai-cybersecurity" },
       { label: "TEE / Hardware-Backed Secure Setup", href: "/capabilities#ai-cybersecurity" },
       { label: "Differential Privacy Implementation", href: "/capabilities#ai-cybersecurity" },
-      { label: "Regulatory Compliance Mapping", href: "/capabilities#ai-cybersecurity" }
-    ]
+      { label: "Regulatory Compliance Mapping", href: "/capabilities#ai-cybersecurity" },
+    ],
   },
   {
     title: "AI Infrastructure",
@@ -349,10 +445,13 @@ const capabilitiesCategories = [
       { label: "Cloud-Native AI Containerization", href: "/capabilities#ai-infrastructure" },
       { label: "GPU Cluster Provisioning Automation", href: "/capabilities#ai-infrastructure" },
       { label: "High-Throughput Data Ingestion", href: "/capabilities#ai-infrastructure" },
-      { label: "Infrastructure Cost Optimization (FinOps)", href: "/capabilities#ai-infrastructure" },
-      { label: "Real-Time Streaming Data Integration", href: "/capabilities#ai-infrastructure" }
-    ]
-  }
+      {
+        label: "Infrastructure FinOps Cost Control",
+        href: "/capabilities#ai-infrastructure",
+      },
+      { label: "Real-Time Streaming Data Integration", href: "/capabilities#ai-infrastructure" },
+    ],
+  },
 ];
 
 const useCasesCategories = [
@@ -360,57 +459,66 @@ const useCasesCategories = [
     title: "GPU Optimization",
     href: "/use-cases#gpu-optimization",
     items: [
-      { label: "Globally Distributed Model Pre-training", href: "/use-cases#gpu-optimization" },
+      { label: "Distributed Model Pre-training", href: "/use-cases#gpu-optimization" },
       { label: "Ultra-low Latency HPC Simulations", href: "/use-cases#gpu-optimization" },
-      { label: "Large-scale LLM Pre-training Acceleration", href: "/use-cases#gpu-optimization" },
-      { label: "Real-time Video Analytics & CV Pipelines", href: "/use-cases#gpu-optimization" },
-      { label: "High-frequency Trading Execution", href: "/use-cases#gpu-optimization" }
-    ]
+      { label: "LLM Pre-training Acceleration", href: "/use-cases#gpu-optimization" },
+      { label: "Real-time Video & CV Pipelines", href: "/use-cases#gpu-optimization" },
+      { label: "High-frequency Trading Execution", href: "/use-cases#gpu-optimization" },
+    ],
   },
   {
     title: "LLM Optimization",
     href: "/use-cases#llm-optimization",
     items: [
       { label: "Enterprise Knowledge Base Search", href: "/use-cases#llm-optimization" },
-      { label: "Automated Code Generation & Review", href: "/use-cases#llm-optimization" },
+      { label: "Automated Code Gen & Review", href: "/use-cases#llm-optimization" },
       { label: "Intelligent Document Processing (IDP)", href: "/use-cases#llm-optimization" },
       { label: "Customer Support Ticket Resolution", href: "/use-cases#llm-optimization" },
-      { label: "Complex Data Translation (Text-to-SQL)", href: "/use-cases#llm-optimization" }
-    ]
+      { label: "Complex Data Text-to-SQL Routing", href: "/use-cases#llm-optimization" },
+    ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/use-cases#ai-trust-reliability",
     items: [
-      { label: "Fraud Detection Model Drift Prevention", href: "/use-cases#ai-trust-reliability" },
-      { label: "Healthcare Diagnostic AI Accuracy Assurance", href: "/use-cases#ai-trust-reliability" },
+      { label: "Fraud Drift Prevention", href: "/use-cases#ai-trust-reliability" },
+      {
+        label: "Healthcare Diagnostic AI Assurance",
+        href: "/use-cases#ai-trust-reliability",
+      },
       { label: "Chatbot Toxicity & Safety Guardrails", href: "/use-cases#ai-trust-reliability" },
-      { label: "Trading Algorithm Stability Monitoring", href: "/use-cases#ai-trust-reliability" },
-      { label: "Manufacturing Sensor Drift Correction", href: "/use-cases#ai-trust-reliability" }
-    ]
+      { label: "Trading Stability Monitoring", href: "/use-cases#ai-trust-reliability" },
+      { label: "Sensor Drift Correction", href: "/use-cases#ai-trust-reliability" },
+    ],
   },
   {
     title: "AI Cybersecurity",
     href: "/use-cases#ai-cybersecurity",
     items: [
-      { label: "Customer Chatbot Prompt Injection Defenses", href: "/use-cases#ai-cybersecurity" },
-      { label: "Proprietary LLM Weights Theft Protection", href: "/use-cases#ai-cybersecurity" },
-      { label: "Healthcare Patient Data Reconstruction", href: "/use-cases#ai-cybersecurity" },
+      { label: "Chatbot Prompt Injection Defenses", href: "/use-cases#ai-cybersecurity" },
+      { label: "LLM Weights Theft Protection", href: "/use-cases#ai-cybersecurity" },
+      { label: "Patient Data Reconstruction Defense", href: "/use-cases#ai-cybersecurity" },
       { label: "Biometric System Adversarial Hardening", href: "/use-cases#ai-cybersecurity" },
-      { label: "Third-party ML Dependency Audits", href: "/use-cases#ai-cybersecurity" }
-    ]
+      { label: "Third-party ML Dependency Audits", href: "/use-cases#ai-cybersecurity" },
+    ],
   },
   {
     title: "AI Infrastructure",
     href: "/use-cases#ai-infrastructure",
     items: [
-      { label: "Carbon-Aware Data Center Energy Optimization", href: "/use-cases#ai-infrastructure" },
-      { label: "GPU Direct Storage (GDS) I/O Optimization", href: "/use-cases#ai-infrastructure" },
-      { label: "Unified Memory (UMA) Memory Optimization", href: "/use-cases#ai-infrastructure" },
+      {
+        label: "Carbon-Aware Energy Optimization",
+        href: "/use-cases#ai-infrastructure",
+      },
+      { label: "GPU Direct Storage I/O Optimization", href: "/use-cases#ai-infrastructure" },
+      { label: "Unified Memory (UMA) Optimization", href: "/use-cases#ai-infrastructure" },
       { label: "Enterprise ML Platform Engineering", href: "/use-cases#ai-infrastructure" },
-      { label: "Automated Failover Multi-Million Inference Routing", href: "/use-cases#ai-infrastructure" }
-    ]
-  }
+      {
+        label: "Failover Multi-Inference Routing",
+        href: "/use-cases#ai-infrastructure",
+      },
+    ],
+  },
 ];
 
 const platformCategories = [
@@ -422,7 +530,7 @@ const platformCategories = [
       { label: "Topology-Aware Scheduling", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
       { label: "MIG & vGPU Partitioning", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
       { label: "Preemptible GPU Arbitrage", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
-    ]
+    ],
   },
   {
     title: "GPU FinOps Dashboard",
@@ -432,7 +540,7 @@ const platformCategories = [
       { label: "Idle Detection & Alerting", href: "/platform#gpu-finops-dashboard" },
       { label: "Spot Arbitrage Scheduling", href: "/platform#gpu-finops-dashboard" },
       { label: "Budget Limits & showback", href: "/platform#gpu-finops-dashboard" },
-    ]
+    ],
   },
   {
     title: "Self-Healing Clusters",
@@ -442,10 +550,9 @@ const platformCategories = [
       { label: "Automated Checkpoint-and-Resume", href: "/platform#self-healing-clusters" },
       { label: "Fast Node Isolation (Fencing)", href: "/platform#self-healing-clusters" },
       { label: "Memory & GPU Diagnostic Sweeps", href: "/platform#self-healing-clusters" },
-    ]
-  }
+    ],
+  },
 ];
-
 
 const featuredOfferings = [
   {
@@ -548,42 +655,153 @@ export function SectionLink({
 
 function getCategoryIcon(title: string) {
   switch (title) {
-    case "Manufacturing & Industrial": return Hammer;
-    case "Technology & Electronics": return Laptop;
-    case "Infrastructure & Construction": return Building2;
-    case "Energy & Utilities": return Zap;
-    case "Financial Services": return Landmark;
-    case "Healthcare & Life Sciences": return HeartPulse;
-    case "Consumer & Retail": return ShoppingBag;
-    case "Media & Services": return Tv;
-    case "GPU Optimization": return Cpu;
-    case "LLM Optimization": return Brain;
-    case "AI Trust & Reliability": return Bot;
-    case "AI Cybersecurity": return Shield;
-    case "AI Infrastructure": return Server;
-    case "Energy Optimization": return Zap;
-    case "GPU-phi Orchestration": return Layers;
-    case "GPU FinOps Dashboard": return BarChart3;
-    case "Self-Healing Clusters": return Settings;
-    default: return LayoutGrid;
+    case "Manufacturing & Industrial":
+      return Hammer;
+    case "Technology & Electronics":
+      return Laptop;
+    case "Infrastructure & Construction":
+      return Building2;
+    case "Energy & Utilities":
+      return Zap;
+    case "Financial Services":
+      return Landmark;
+    case "Healthcare & Life Sciences":
+      return HeartPulse;
+    case "Consumer & Retail":
+      return ShoppingBag;
+    case "Media & Services":
+      return Tv;
+    case "GPU Optimization":
+      return Cpu;
+    case "LLM Optimization":
+      return Brain;
+    case "AI Trust & Reliability":
+      return Bot;
+    case "AI Cybersecurity":
+      return Shield;
+    case "AI Infrastructure":
+      return Server;
+    case "Energy Optimization":
+      return Zap;
+    case "GPU-phi Orchestration":
+      return Layers;
+    case "GPU FinOps Dashboard":
+      return BarChart3;
+    case "Self-Healing Clusters":
+      return Settings;
+    default:
+      return LayoutGrid;
   }
 }
 
 function getSubcategoryIcon(label: string) {
   const text = label.toLowerCase();
-  if (text.includes("gpu") || text.includes("cuda") || text.includes("hardware") || text.includes("triton")) return Cpu;
-  if (text.includes("network") || text.includes("fabric") || text.includes("latency") || text.includes("bandwidth") || text.includes("routing")) return Globe;
-  if (text.includes("storage") || text.includes("memory") || text.includes("database") || text.includes("ingestion")) return Server;
-  if (text.includes("llm") || text.includes("model") || text.includes("prompt") || text.includes("agent") || text.includes("rag") || text.includes("semantic") || text.includes("translation") || text.includes("knowledge")) return Brain;
-  if (text.includes("security") || text.includes("defense") || text.includes("injection") || text.includes("penetration") || text.includes("privacy") || text.includes("trust") || text.includes("theft") || text.includes("fraud") || text.includes("vulnerability") || text.includes("adversarial") || text.includes("drift") || text.includes("traceability")) return Shield;
-  if (text.includes("energy") || text.includes("power") || text.includes("cooling") || text.includes("thermal") || text.includes("carbon") || text.includes("heat")) return Zap;
-  if (text.includes("cloud") || text.includes("kubernetes") || text.includes("cluster") || text.includes("orchestration") || text.includes("container") || text.includes("multi-cluster") || text.includes("microservice")) return Layers;
-  if (text.includes("cost") || text.includes("finops") || text.includes("budget") || text.includes("arbitrage") || text.includes("trading")) return Coins;
-  if (text.includes("code") || text.includes("pipeline") || text.includes("ci/cd") || text.includes("testing") || text.includes("review") || text.includes("architecture")) return LayoutGrid;
-  if (text.includes("data") || text.includes("analytic") || text.includes("diagnostic") || text.includes("metric") || text.includes("observability") || text.includes("evaluate") || text.includes("dashboard")) return BarChart3;
-  if (text.includes("automat") || text.includes("autonomy") || text.includes("self-healing") || text.includes("failover") || text.includes("resume") || text.includes("fencing")) return Settings;
-  if (text.includes("healthcare") || text.includes("patient") || text.includes("biometric")) return HeartPulse;
-  
+  if (
+    text.includes("gpu") ||
+    text.includes("cuda") ||
+    text.includes("hardware") ||
+    text.includes("triton")
+  )
+    return Cpu;
+  if (
+    text.includes("network") ||
+    text.includes("fabric") ||
+    text.includes("latency") ||
+    text.includes("bandwidth") ||
+    text.includes("routing")
+  )
+    return Globe;
+  if (
+    text.includes("storage") ||
+    text.includes("memory") ||
+    text.includes("database") ||
+    text.includes("ingestion")
+  )
+    return Server;
+  if (
+    text.includes("llm") ||
+    text.includes("model") ||
+    text.includes("prompt") ||
+    text.includes("agent") ||
+    text.includes("rag") ||
+    text.includes("semantic") ||
+    text.includes("translation") ||
+    text.includes("knowledge")
+  )
+    return Brain;
+  if (
+    text.includes("security") ||
+    text.includes("defense") ||
+    text.includes("injection") ||
+    text.includes("penetration") ||
+    text.includes("privacy") ||
+    text.includes("trust") ||
+    text.includes("theft") ||
+    text.includes("fraud") ||
+    text.includes("vulnerability") ||
+    text.includes("adversarial") ||
+    text.includes("drift") ||
+    text.includes("traceability")
+  )
+    return Shield;
+  if (
+    text.includes("energy") ||
+    text.includes("power") ||
+    text.includes("cooling") ||
+    text.includes("thermal") ||
+    text.includes("carbon") ||
+    text.includes("heat")
+  )
+    return Zap;
+  if (
+    text.includes("cloud") ||
+    text.includes("kubernetes") ||
+    text.includes("cluster") ||
+    text.includes("orchestration") ||
+    text.includes("container") ||
+    text.includes("multi-cluster") ||
+    text.includes("microservice")
+  )
+    return Layers;
+  if (
+    text.includes("cost") ||
+    text.includes("finops") ||
+    text.includes("budget") ||
+    text.includes("arbitrage") ||
+    text.includes("trading")
+  )
+    return Coins;
+  if (
+    text.includes("code") ||
+    text.includes("pipeline") ||
+    text.includes("ci/cd") ||
+    text.includes("testing") ||
+    text.includes("review") ||
+    text.includes("architecture")
+  )
+    return LayoutGrid;
+  if (
+    text.includes("data") ||
+    text.includes("analytic") ||
+    text.includes("diagnostic") ||
+    text.includes("metric") ||
+    text.includes("observability") ||
+    text.includes("evaluate") ||
+    text.includes("dashboard")
+  )
+    return BarChart3;
+  if (
+    text.includes("automat") ||
+    text.includes("autonomy") ||
+    text.includes("self-healing") ||
+    text.includes("failover") ||
+    text.includes("resume") ||
+    text.includes("fencing")
+  )
+    return Settings;
+  if (text.includes("healthcare") || text.includes("patient") || text.includes("biometric"))
+    return HeartPulse;
+
   return ChevronRight;
 }
 
@@ -599,7 +817,9 @@ function HomeDropdown() {
           >
             {(() => {
               const Icon = getSubcategoryIcon(item.label);
-              return <Icon className="h-4 w-4 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0" />;
+              return (
+                <Icon className="h-4 w-4 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0" />
+              );
             })()}
             <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-normal tracking-wide">
               {item.label}
@@ -636,9 +856,11 @@ function OfferingsDropdown() {
                 >
                   {(() => {
                     const Icon = getSubcategoryIcon(item.label);
-                    return <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />;
+                    return (
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
+                    );
                   })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -675,7 +897,7 @@ function IndustriesDropdown() {
                   className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
                 >
                   <item.icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-600 transition-colors shrink-0 mt-0.5" />
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -713,9 +935,11 @@ function SolutionsDropdown() {
                 >
                   {(() => {
                     const Icon = getSubcategoryIcon(item.label);
-                    return <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />;
+                    return (
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
+                    );
                   })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -753,9 +977,11 @@ function CapabilitiesDropdown() {
                 >
                   {(() => {
                     const Icon = getSubcategoryIcon(item.label);
-                    return <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />;
+                    return (
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
+                    );
                   })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -793,9 +1019,11 @@ function UseCasesDropdown() {
                 >
                   {(() => {
                     const Icon = getSubcategoryIcon(item.label);
-                    return <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />;
+                    return (
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
+                    );
                   })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -833,9 +1061,11 @@ function PlatformDropdown() {
                 >
                   {(() => {
                     const Icon = getSubcategoryIcon(item.label);
-                    return <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />;
+                    return (
+                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
+                    );
                   })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide">
+                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
                     {item.label}
                   </span>
                 </SectionLink>
@@ -860,7 +1090,9 @@ function AboutDropdown() {
           >
             {(() => {
               const Icon = getSubcategoryIcon(item.label);
-              return <Icon className="h-4 w-4 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0" />;
+              return (
+                <Icon className="h-4 w-4 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0" />
+              );
             })()}
             <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-normal tracking-wide">
               {item.label}
@@ -895,7 +1127,12 @@ function NavItem({ label, to, icon: Icon, children }: NavItemProps) {
     timeoutRef.current = setTimeout(() => setOpen(false), 300);
   };
 
-  useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); }, []);
+  useEffect(
+    () => () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    },
+    [],
+  );
 
   if (!children) {
     return (
@@ -911,12 +1148,7 @@ function NavItem({ label, to, icon: Icon, children }: NavItemProps) {
   }
 
   return (
-    <div
-      ref={ref}
-      className=""
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div ref={ref} className="" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Link
         to={to}
         className="flex items-center gap-1.5 text-sm font-bold text-foreground transition-colors hover:text-blue-600 px-3.5 py-2 rounded-md whitespace-nowrap"
@@ -927,13 +1159,11 @@ function NavItem({ label, to, icon: Icon, children }: NavItemProps) {
       </Link>
 
       {open && (
-        <div 
+        <div
           className="absolute top-full left-0 right-0 pt-6 z-[200] animate-dropdown"
           onClick={() => setOpen(false)}
         >
-          <div className="flex justify-center w-full">
-            {children}
-          </div>
+          <div className="flex justify-center w-full">{children}</div>
         </div>
       )}
     </div>
@@ -959,7 +1189,9 @@ function MobileAccordion({ title, to, children, onClose }: MobileAccordionProps)
         onClick={() => setOpen((v) => !v)}
       >
         {title}
-        <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
         <div className="pb-3 pl-2">
@@ -1007,10 +1239,13 @@ export function Header() {
 
       <header className="sticky top-0 z-50 border-b border-border/20 bg-background/20 backdrop-blur-xl">
         <div className="max-w-screen-2xl mx-auto w-full flex h-16 items-center justify-between px-6 md:px-8 xl:px-12">
-
           {/* Brand */}
           <Link to="/" className="flex items-center group mr-6 shrink-0">
-            <img src="/logo.png" alt="TrustGrid.AI Logo" className="h-9 w-auto object-contain" />
+            <img
+              src="/logo.png"
+              alt="TrustGrid.AI Logo"
+              className="h-9 w-auto object-contain brightness-[2.8] contrast-[1.15] saturate-[1.3] transition-all duration-300 group-hover:brightness-[3.2]"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -1044,7 +1279,10 @@ export function Header() {
           {/* Action + Hamburger */}
           <div className="flex items-center gap-3">
             <Link to="/contact" className="hidden xl:block">
-              <Button size="default" className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-500/20 transition-all cursor-pointer">
+              <Button
+                size="default"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-500/20 transition-all cursor-pointer"
+              >
                 Book Strategy Session
               </Button>
             </Link>
@@ -1063,10 +1301,11 @@ export function Header() {
         {mobileOpen && (
           <div className="xl:hidden border-t border-border/40 bg-background max-h-[88vh] overflow-y-auto">
             <div className="px-5 py-4">
-
               {/* Featured strip */}
               <div className="mb-4 p-3 rounded-xl bg-surface/40 border border-border/40">
-                <p className="text-[10px] font-semibold tracking-widest text-muted-foreground mb-2">Key Offerings</p>
+                <p className="text-[10px] font-semibold tracking-widest text-muted-foreground mb-2">
+                  Key Offerings
+                </p>
                 <div className="grid grid-cols-2 gap-2">
                   {featuredOfferings.map((item) => (
                     <SectionLink
@@ -1078,7 +1317,9 @@ export function Header() {
                       <div className={`p-1.5 rounded-md ${item.bg}`}>
                         <item.icon className={`h-3.5 w-3.5 ${item.color}`} />
                       </div>
-                      <span className="text-xs font-medium text-foreground leading-tight">{item.label}</span>
+                      <span className="text-xs font-medium text-foreground leading-tight">
+                        {item.label}
+                      </span>
                     </SectionLink>
                   ))}
                 </div>
@@ -1099,7 +1340,11 @@ export function Header() {
                 </div>
               </MobileAccordion>
 
-              <MobileAccordion title="Offerings" to="/offerings" onClose={() => setMobileOpen(false)}>
+              <MobileAccordion
+                title="Offerings"
+                to="/offerings"
+                onClose={() => setMobileOpen(false)}
+              >
                 <div className="space-y-3.5 py-2">
                   {offeringsCategories.map((cat) => (
                     <div key={cat.title} className="space-y-1">
@@ -1127,7 +1372,11 @@ export function Header() {
                 </div>
               </MobileAccordion>
 
-              <MobileAccordion title="Industries" to="/industries" onClose={() => setMobileOpen(false)}>
+              <MobileAccordion
+                title="Industries"
+                to="/industries"
+                onClose={() => setMobileOpen(false)}
+              >
                 <div className="space-y-1 py-1">
                   {industryOfferingsItems.map((item) => (
                     <SectionLink
@@ -1142,7 +1391,11 @@ export function Header() {
                 </div>
               </MobileAccordion>
 
-              <MobileAccordion title="Solutions" to="/solutions" onClose={() => setMobileOpen(false)}>
+              <MobileAccordion
+                title="Solutions"
+                to="/solutions"
+                onClose={() => setMobileOpen(false)}
+              >
                 <div className="space-y-3.5 py-2">
                   {solutionsCategories.map((cat) => (
                     <div key={cat.title} className="space-y-1">
@@ -1170,7 +1423,11 @@ export function Header() {
                 </div>
               </MobileAccordion>
 
-              <MobileAccordion title="Capabilities" to="/capabilities" onClose={() => setMobileOpen(false)}>
+              <MobileAccordion
+                title="Capabilities"
+                to="/capabilities"
+                onClose={() => setMobileOpen(false)}
+              >
                 <div className="space-y-3.5 py-2">
                   {capabilitiesCategories.map((cat) => (
                     <div key={cat.title} className="space-y-1">
@@ -1198,7 +1455,11 @@ export function Header() {
                 </div>
               </MobileAccordion>
 
-              <MobileAccordion title="Use Cases" to="/use-cases" onClose={() => setMobileOpen(false)}>
+              <MobileAccordion
+                title="Use Cases"
+                to="/use-cases"
+                onClose={() => setMobileOpen(false)}
+              >
                 <div className="space-y-1 py-1">
                   {useCasesItems.map((item) => (
                     <SectionLink
@@ -1257,7 +1518,10 @@ export function Header() {
               </MobileAccordion>
 
               <Link to="/contact" onClick={() => setMobileOpen(false)} className="block mt-5">
-                <Button size="default" className="w-full bg-primary text-primary-foreground text-sm">
+                <Button
+                  size="default"
+                  className="w-full bg-primary text-primary-foreground text-sm"
+                >
                   Book Strategy Session
                 </Button>
               </Link>

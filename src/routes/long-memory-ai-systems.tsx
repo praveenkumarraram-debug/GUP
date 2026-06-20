@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail, OfferingDetail } from "@/components/site/ServiceDetail";
+import { OptimizationMatrix } from "@/components/site/OptimizationMatrix";
+import { PartnerSection } from "@/components/site/PartnerSection";
+import { ragOptimizationOfferings } from "@/data/optimization-offerings";
 
 const detailedOfferings: OfferingDetail[] = [
   {
@@ -80,6 +83,13 @@ export const Route = createFileRoute("/long-memory-ai-systems")({
       ]}
       stack={["Pinecone", "Weaviate", "Milvus", "Neo4j", "Qdrant", "Elasticsearch", "LangChain"]}
       detailedOfferings={detailedOfferings}
-    />
+    >
+      <OptimizationMatrix
+        title="RAG Optimization Offerings"
+        description="Transform your retrieval-augmented generation pipelines from simple vector searches into highly precise, context-aware knowledge retrieval systems. We optimize every step from ingestion to generation."
+        offerings={ragOptimizationOfferings}
+      />
+      <PartnerSection />
+    </ServiceDetail>
   ),
 });
