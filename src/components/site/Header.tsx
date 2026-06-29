@@ -94,118 +94,98 @@ const industryOfferingsItems = [
 const industrySegments = [
   {
     title: "Manufacturing & Industrial",
+    description: "Optimize factory operations, supply chains, and manufacturing intelligence.",
+    cta: { text: "Want to deploy AI in your factory?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Automobiles", icon: Car, href: "/industries#manufacturing-industrial" },
-      { label: "Auto Components", icon: Wrench, href: "/industries#manufacturing-industrial" },
-      {
-        label: "Engineering & Capital Goods",
-        icon: Settings,
-        href: "/industries#manufacturing-industrial",
-      },
-      {
-        label: "Defence Manufacturing",
-        icon: Shield,
-        href: "/industries#manufacturing-industrial",
-      },
-      { label: "MSME", icon: Home, href: "/industries#manufacturing-industrial" },
+      { label: "Automobiles", icon: Car, href: "/industries#manufacturing-industrial", subtext: "Autonomous driving and vehicle diagnostics" },
+      { label: "Auto Components", icon: Wrench, href: "/industries#manufacturing-industrial", subtext: "Predictive maintenance and quality control" },
+      { label: "Engineering & Capital Goods", icon: Settings, href: "/industries#manufacturing-industrial", subtext: "Robotics and factory floor automation" },
+      { label: "Defence Manufacturing", icon: Shield, href: "/industries#manufacturing-industrial", subtext: "Secure systems and ruggedized hardware" },
+      { label: "MSME", icon: Home, href: "/industries#manufacturing-industrial", subtext: "Affordable digital transformation solutions" },
     ],
   },
   {
     title: "Technology & Electronics",
+    description: "Accelerate software engineering and hardware optimization.",
+    cta: { text: "Looking for custom chip design AI?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "IT & BPM", icon: Laptop, href: "/industries#telecommunications-network" },
-      {
-        label: "Electronics & Semiconductor",
-        icon: Cpu,
-        href: "/industries#telecommunications-network",
-      },
-      { label: "Telecommunications", icon: Phone, href: "/industries#telecommunications-network" },
-      {
-        label: "Science & Technology",
-        icon: FlaskConical,
-        href: "/industries#telecommunications-network",
-      },
-      { label: "Electric Vehicles", icon: Zap, href: "/industries#telecommunications-network" },
+      { label: "IT & BPM", icon: Laptop, href: "/industries#telecommunications-network", subtext: "Automated workflows and code assistance" },
+      { label: "Electronics & Semiconductor", icon: Cpu, href: "/industries#telecommunications-network", subtext: "EDA tool acceleration and chip design" },
+      { label: "Telecommunications", icon: Phone, href: "/industries#telecommunications-network", subtext: "Network traffic routing and 5G optimization" },
+      { label: "Science & Technology", icon: FlaskConical, href: "/industries#telecommunications-network", subtext: "Scientific computing and laboratory automation" },
+      { label: "Electric Vehicles", icon: Zap, href: "/industries#telecommunications-network", subtext: "Battery management and charging optimization" },
     ],
   },
   {
     title: "Infrastructure & Construction",
+    description: "AI-driven materials optimization and project planning.",
+    cta: { text: "Need smart infrastructure solutions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Cement", icon: Layers, href: "/industries#infrastructure-construction" },
-      { label: "Steel", icon: Hammer, href: "/industries#infrastructure-construction" },
-      { label: "Infrastructure", icon: Building2, href: "/industries#infrastructure-construction" },
-      { label: "Real Estate", icon: Home, href: "/industries#infrastructure-construction" },
-      {
-        label: "Roads & Highways",
-        icon: Milestone,
-        href: "/industries#infrastructure-construction",
-      },
+      { label: "Cement", icon: Layers, href: "/industries#infrastructure-construction", subtext: "Chemical mix optimization and kiln control" },
+      { label: "Steel", icon: Hammer, href: "/industries#infrastructure-construction", subtext: "Blast furnace optimization and quality scanning" },
+      { label: "Infrastructure", icon: Building2, href: "/industries#infrastructure-construction", subtext: "Structural health monitoring and smart grids" },
+      { label: "Real Estate", icon: Home, href: "/industries#infrastructure-construction", subtext: "Energy efficiency and property intelligence" },
+      { label: "Roads & Highways", icon: Milestone, href: "/industries#infrastructure-construction", subtext: "Traffic flow modeling and surface inspections" },
     ],
   },
   {
     title: "Energy & Utilities",
+    description: "Manage renewable grids, oil & gas reserves, and power distribution.",
+    cta: { text: "Ready for smart grid integration?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Oil & Gas", icon: Droplet, href: "/industries#energy-utilities-sustainability" },
-      { label: "Power", icon: Zap, href: "/industries#energy-utilities-sustainability" },
-      { label: "Renewable Energy", icon: Sun, href: "/industries#energy-utilities-sustainability" },
-      { label: "Ports", icon: Anchor, href: "/industries#energy-utilities-sustainability" },
-      { label: "Railways", icon: Train, href: "/industries#energy-utilities-sustainability" },
+      { label: "Oil & Gas", icon: Droplet, href: "/industries#energy-utilities-sustainability", subtext: "Seismic analysis and reservoir simulation" },
+      { label: "Power", icon: Zap, href: "/industries#energy-utilities-sustainability", subtext: "Load forecasting and grid stabilization" },
+      { label: "Renewable Energy", icon: Sun, href: "/industries#energy-utilities-sustainability", subtext: "Solar and wind output predictability" },
+      { label: "Ports", icon: Anchor, href: "/industries#energy-utilities-sustainability", subtext: "Logistics routing and cargo handling" },
+      { label: "Railways", icon: Train, href: "/industries#energy-utilities-sustainability", subtext: "Track inspections and fleet scheduling" },
     ],
   },
   {
     title: "Financial Services",
+    description: "Algorithmic trading, fraud detection, and risk modeling.",
+    cta: { text: "Want to secure your transactions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Banking", icon: Landmark, href: "/industries#banking-financial-services" },
-      { label: "Financial Services", icon: Coins, href: "/industries#banking-financial-services" },
-      { label: "Insurance", icon: FileText, href: "/industries#banking-financial-services" },
-      { label: "E-Commerce", icon: ShoppingBag, href: "/industries#banking-financial-services" },
-      { label: "Gems & Jewellery", icon: Gem, href: "/industries#banking-financial-services" },
+      { label: "Banking", icon: Landmark, href: "/industries#banking-financial-services", subtext: "Credit scoring and conversational banking" },
+      { label: "Financial Services", icon: Coins, href: "/industries#banking-financial-services", subtext: "Portfolio optimization and risk analysis" },
+      { label: "Insurance", icon: FileText, href: "/industries#banking-financial-services", subtext: "Claims processing and underwriting automation" },
+      { label: "E-Commerce", icon: ShoppingBag, href: "/industries#banking-financial-services", subtext: "Recommendation engines and dynamic pricing" },
+      { label: "Gems & Jewellery", icon: Gem, href: "/industries#banking-financial-services", subtext: "Authentication and supply chain tracking" },
     ],
   },
   {
     title: "Healthcare & Life Sciences",
+    description: "Accelerate drug discovery, clinical diagnostics, and medical research.",
+    cta: { text: "Looking for drug discovery solutions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Pharmaceuticals", icon: Pill, href: "/industries#healthcare-life-sciences" },
-      { label: "Healthcare", icon: HeartPulse, href: "/industries#healthcare-life-sciences" },
-      { label: "Medical Devices", icon: Stethoscope, href: "/industries#healthcare-life-sciences" },
-      { label: "Biotechnology", icon: Dna, href: "/industries#healthcare-life-sciences" },
-      { label: "Ayush", icon: Leaf, href: "/industries#healthcare-life-sciences" },
+      { label: "Pharmaceuticals", icon: Pill, href: "/industries#healthcare-life-sciences", subtext: "Molecular modeling and clinical trial analysis" },
+      { label: "Healthcare", icon: HeartPulse, href: "/industries#healthcare-life-sciences", subtext: "Patient monitoring and diagnostic assistance" },
+      { label: "Medical Devices", icon: Stethoscope, href: "/industries#healthcare-life-sciences", subtext: "Embedded software and sensor calibration" },
+      { label: "Biotechnology", icon: Dna, href: "/industries#healthcare-life-sciences", subtext: "Genomic sequencing and protein folding" },
+      { label: "Ayush", icon: Leaf, href: "/industries#healthcare-life-sciences", subtext: "Natural product research and analysis" },
     ],
   },
   {
     title: "Consumer & Retail",
+    description: "Personalize shopping experiences and optimize inventory.",
+    cta: { text: "Need supply chain intelligence?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "FMCG", icon: Package, href: "/industries#retail-e-commerce" },
-      { label: "Retail", icon: Store, href: "/industries#retail-e-commerce" },
-      { label: "Consumer Durables", icon: Tv, href: "/industries#retail-e-commerce" },
-      { label: "Textiles", icon: Scissors, href: "/industries#retail-e-commerce" },
-      { label: "Food Processing", icon: Utensils, href: "/industries#retail-e-commerce" },
+      { label: "FMCG", icon: Package, href: "/industries#retail-e-commerce", subtext: "Demand forecasting and packaging design" },
+      { label: "Retail", icon: Store, href: "/industries#retail-e-commerce", subtext: "Smart checkout and store layout optimization" },
+      { label: "Consumer Durables", icon: Tv, href: "/industries#retail-e-commerce", subtext: "IoT device intelligence and support" },
+      { label: "Textiles", icon: Scissors, href: "/industries#retail-e-commerce", subtext: "Pattern generation and defect detection" },
+      { label: "Food Processing", icon: Utensils, href: "/industries#retail-e-commerce", subtext: "Sortation automation and shelf-life tracking" },
     ],
   },
   {
     title: "Media & Services",
+    description: "Automate content generation, translation, and training systems.",
+    cta: { text: "Want to build custom training platforms?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      {
-        label: "Media & Entertainment",
-        icon: Film,
-        href: "/industries#education-learning-platforms",
-      },
-      {
-        label: "Tourism & Hospitality",
-        icon: Compass,
-        href: "/industries#education-learning-platforms",
-      },
-      { label: "Aviation", icon: Plane, href: "/industries#education-learning-platforms" },
-      {
-        label: "Education & Training",
-        icon: GraduationCap,
-        href: "/industries#education-learning-platforms",
-      },
-      {
-        label: "Agriculture & Allied",
-        icon: Sprout,
-        href: "/industries#education-learning-platforms",
-      },
+      { label: "Media & Entertainment", icon: Film, href: "/industries#education-learning-platforms", subtext: "Video compression and automated editing" },
+      { label: "Tourism & Hospitality", icon: Compass, href: "/industries#education-learning-platforms", subtext: "Dynamic itinerary planning and booking bots" },
+      { label: "Aviation", icon: Plane, href: "/industries#education-learning-platforms", subtext: "Flight path optimization and crew scheduling" },
+      { label: "Education & Training", icon: GraduationCap, href: "/industries#education-learning-platforms", subtext: "Personalized learning pathways" },
+      { label: "Agriculture & Allied", icon: Sprout, href: "/industries#education-learning-platforms", subtext: "Crop yield prediction and soil analysis" },
     ],
   },
 ];
@@ -247,68 +227,83 @@ const aboutItems = [
   { label: "Global Presence", href: "/about#presence" },
   { label: "Case Studies", href: "/about#case-studies" },
   { label: "Insights & Blog", href: "/about#insights" },
-  { label: "Contact Us", href: "/about#contact" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Consulting Session", href: "/consulting" },
+  { label: "Partner Program", href: "/partnership" },
+  { label: "Sales Enquiry", href: "/sales-enquiry" },
 ];
 
 const offeringsCategories = [
   {
     title: "GPU Optimization",
     href: "/offerings#gpu-optimization",
+    description: "Maximize compute efficiency and throughput for intensive AI workloads.",
+    cta: { text: "Need help optimizing your GPU clusters?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "GPU Super Scaling", href: "/offerings#gpu-optimization" },
-      { label: "Low Latency HPC Networking", href: "/offerings#gpu-optimization" },
-      { label: "Memory Bandwidth Optimization", href: "/offerings#gpu-optimization" },
-      { label: "Inference Latency Reduction", href: "/offerings#gpu-optimization" },
+      { label: "GPU Super Scaling", href: "/offerings#gpu-optimization", subtext: "High-performance multi-GPU scaling and scheduling" },
+      { label: "Low Latency HPC Networking", href: "/offerings#gpu-optimization", subtext: "InfiniBand and RoCE fabric optimization" },
+      { label: "Memory Bandwidth Optimization", href: "/offerings#gpu-optimization", subtext: "vGPU partitioning and memory mapping" },
+      { label: "Inference Latency Reduction", href: "/offerings#gpu-optimization", subtext: "Custom CUDA kernels and Triton acceleration" },
     ],
   },
   {
     title: "LLM Optimization",
     href: "/offerings#llm-optimization",
+    description: "Fine-tune and optimize large language models for production deployment.",
+    cta: { text: "Looking to deploy custom LLMs?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "PEFT/LoRA Fine-Tuning", href: "/offerings#llm-optimization" },
-      { label: "Advanced RAG Pipelines", href: "/offerings#llm-optimization" },
-      { label: "Autonomous Agent Frameworks", href: "/offerings#llm-optimization" },
-      { label: "Cost-Per-Token Optimization", href: "/offerings#llm-optimization" },
+      { label: "PEFT/LoRA Fine-Tuning", href: "/offerings#llm-optimization", subtext: "Parameter-efficient model adaptation" },
+      { label: "Advanced RAG Pipelines", href: "/offerings#llm-optimization", subtext: "Context-aware semantic search architectures" },
+      { label: "Autonomous Agent Frameworks", href: "/offerings#llm-optimization", subtext: "Multi-agent systems and state management" },
+      { label: "Cost-Per-Token Optimization", href: "/offerings#llm-optimization", subtext: "Quantization and caching strategies" },
     ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/offerings#ai-trust-reliability",
+    description: "Ensure model robustness, safety, and continuous performance.",
+    cta: { text: "Need to audit your AI models?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Model Drift Detection", href: "/offerings#ai-trust-reliability" },
-      { label: "LLM Observability Stack", href: "/offerings#ai-trust-reliability" },
-      { label: "AI Red-Teaming & Stress Tests", href: "/offerings#ai-trust-reliability" },
-      { label: "Automated CI/CD Retraining", href: "/offerings#ai-trust-reliability" },
+      { label: "Model Drift Detection", href: "/offerings#ai-trust-reliability", subtext: "Real-time accuracy and distribution monitoring" },
+      { label: "LLM Observability Stack", href: "/offerings#ai-trust-reliability", subtext: "Traces, evaluations, and prompt logging" },
+      { label: "AI Red-Teaming & Stress Tests", href: "/offerings#ai-trust-reliability", subtext: "Vulnerability and bias testing" },
+      { label: "Automated CI/CD Retraining", href: "/offerings#ai-trust-reliability", subtext: "Continuous learning pipelines" },
     ],
   },
   {
     title: "AI Cybersecurity",
     href: "/offerings#ai-cybersecurity",
+    description: "Protect your AI assets, models, and data from adversarial threats.",
+    cta: { text: "Need help securing your systems?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Adversarial Robustness Testing", href: "/offerings#ai-cybersecurity" },
-      { label: "Confidential GPU Inference", href: "/offerings#ai-cybersecurity" },
-      { label: "Prompt Injection Defenses", href: "/offerings#ai-cybersecurity" },
-      { label: "Supply Chain Scanning", href: "/offerings#ai-cybersecurity" },
+      { label: "Adversarial Robustness Testing", href: "/offerings#ai-cybersecurity", subtext: "Evasion and poisoning defense audits" },
+      { label: "Confidential GPU Inference", href: "/offerings#ai-cybersecurity", subtext: "TEE and hardware-based model protection" },
+      { label: "Prompt Injection Defenses", href: "/offerings#ai-cybersecurity", subtext: "Active guardrails and input filtering" },
+      { label: "Supply Chain Scanning", href: "/offerings#ai-cybersecurity", subtext: "Dependency and model weight verification" },
     ],
   },
   {
     title: "AI Infrastructure",
     href: "/offerings#ai-infrastructure",
+    description: "Design and deploy highly scalable, resilient MLOps environments.",
+    cta: { text: "Ready to scale your AI infra?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "MLOps/LLMOps Architecture", href: "/offerings#ai-infrastructure" },
-      { label: "Highly Available Vector DBs", href: "/offerings#ai-infrastructure" },
-      { label: "Kubernetes Orchestration", href: "/offerings#ai-infrastructure" },
-      { label: "Energy & Storage Optimization", href: "/offerings#ai-infrastructure" },
+      { label: "MLOps/LLMOps Architecture", href: "/offerings#ai-infrastructure", subtext: "End-to-end training and inference pipelines" },
+      { label: "Highly Available Vector DBs", href: "/offerings#ai-infrastructure", subtext: "Distributed vector index hosting" },
+      { label: "Kubernetes Orchestration", href: "/offerings#ai-infrastructure", subtext: "Dynamic GPU slicing and auto-scaling" },
+      { label: "Energy & Storage Optimization", href: "/offerings#ai-infrastructure", subtext: "Green computing and data tiering" },
     ],
   },
   {
     title: "Energy Optimization",
     href: "/offerings#energy-optimization-hyperscale",
+    description: "Reduce power consumption and environmental impact of AI workloads.",
+    cta: { text: "Want to reduce your AI carbon footprint?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "GW-Scale Power Strategy", href: "/offerings#energy-optimization-hyperscale" },
-      { label: "AI Thermal Cooling Transition", href: "/offerings#energy-optimization-hyperscale" },
-      { label: "GPU & Fabric Energy Audit", href: "/offerings#energy-optimization-hyperscale" },
-      { label: "Next-Gen Power & Microgrids", href: "/offerings#energy-optimization-hyperscale" },
+      { label: "GW-Scale Power Strategy", href: "/offerings#energy-optimization-hyperscale", subtext: "Power purchasing and grid integration" },
+      { label: "AI Thermal Cooling Transition", href: "/offerings#energy-optimization-hyperscale", subtext: "Liquid cooling and heat management" },
+      { label: "GPU & Fabric Energy Audit", href: "/offerings#energy-optimization-hyperscale", subtext: "Efficiency benchmarking and analysis" },
+      { label: "Next-Gen Power & Microgrids", href: "/offerings#energy-optimization-hyperscale", subtext: "On-site clean energy generation" },
     ],
   },
 ];
@@ -317,72 +312,81 @@ const solutionsCategories = [
   {
     title: "GPU Optimization",
     href: "/solutions#gpu-optimization",
+    description: "Tailored enterprise solutions for maximizing hardware efficiency.",
+    cta: { text: "Need GPU scaling solutions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Super Scaling", href: "/solutions#gpu-optimization" },
-      { label: "Low-Latency HPC Networking", href: "/solutions#gpu-optimization" },
-      { label: "Memory Optimization", href: "/solutions#gpu-optimization" },
-      { label: "Inference Speed Reduction", href: "/solutions#gpu-optimization" },
-      { label: "Multi-Tenant GPU Management", href: "/solutions#gpu-optimization" },
+      { label: "Super Scaling", href: "/solutions#gpu-optimization", subtext: "Enterprise-grade multi-node scaling" },
+      { label: "Low-Latency HPC Networking", href: "/solutions#gpu-optimization", subtext: "High-speed network fabric tuning" },
+      { label: "Memory Optimization", href: "/solutions#gpu-optimization", subtext: "VRAM footprint and bandwidth tuning" },
+      { label: "Inference Speed Reduction", href: "/solutions#gpu-optimization", subtext: "Fast inference response times" },
+      { label: "Multi-Tenant GPU Management", href: "/solutions#gpu-optimization", subtext: "Shared cluster resource allocation" },
     ],
   },
   {
     title: "LLM Optimization",
     href: "/solutions#llm-optimization",
+    description: "Deploy large language models at scale with optimized cost and latency.",
+    cta: { text: "Want to optimize your LLM costs?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "RAG Pipeline Architecture", href: "/solutions#llm-optimization" },
-      { label: "Fine-Tuning (PEFT / LoRA)", href: "/solutions#llm-optimization" },
-      { label: "Autonomous Agent Frameworks", href: "/solutions#llm-optimization" },
-      { label: "Multi-Modal Model Integration", href: "/solutions#llm-optimization" },
-      { label: "Token Cost Optimization", href: "/solutions#llm-optimization" },
+      { label: "RAG Pipeline Architecture", href: "/solutions#llm-optimization", subtext: "Enterprise search and retrieval" },
+      { label: "Fine-Tuning (PEFT / LoRA)", href: "/solutions#llm-optimization", subtext: "Domain-specific model adaptations" },
+      { label: "Autonomous Agent Frameworks", href: "/solutions#llm-optimization", subtext: "Multi-agent task orchestration" },
+      { label: "Multi-Modal Model Integration", href: "/solutions#llm-optimization", subtext: "Vision and audio model pipelines" },
+      { label: "Token Cost Optimization", href: "/solutions#llm-optimization", subtext: "Caching and context compression" },
     ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/solutions#ai-trust-reliability",
+    description: "Maintain model integrity, compliance, and operational reliability.",
+    cta: { text: "Ready to implement AI guardrails?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Model Drift Detection", href: "/solutions#ai-trust-reliability" },
-      { label: "LLM Observability Stack", href: "/solutions#ai-trust-reliability" },
-      { label: "Red-Teaming & Stress Testing", href: "/solutions#ai-trust-reliability" },
-      { label: "Automated Retraining Pipelines", href: "/solutions#ai-trust-reliability" },
-      { label: "SLA / SLO Enforcement", href: "/solutions#ai-trust-reliability" },
+      { label: "Model Drift Detection", href: "/solutions#ai-trust-reliability", subtext: "Continuous data distribution monitoring" },
+      { label: "LLM Observability Stack", href: "/solutions#ai-trust-reliability", subtext: "Deep tracing and evaluation dashboards" },
+      { label: "Red-Teaming & Stress Testing", href: "/solutions#ai-trust-reliability", subtext: "Automated vulnerability scanning" },
+      { label: "Automated Retraining Pipelines", href: "/solutions#ai-trust-reliability", subtext: "Trigger-based continuous learning" },
+      { label: "SLA / SLO Enforcement", href: "/solutions#ai-trust-reliability", subtext: "Performance guarantee monitoring" },
     ],
   },
   {
     title: "AI Cybersecurity",
     href: "/solutions#ai-cybersecurity",
+    description: "Robust cybersecurity designed specifically for AI models and infrastructure.",
+    cta: { text: "Need help securing your AI assets?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Robustness Testing", href: "/solutions#ai-cybersecurity" },
-      { label: "Confidential Computing", href: "/solutions#ai-cybersecurity" },
-      { label: "Prompt Injection Defense", href: "/solutions#ai-cybersecurity" },
-      { label: "Supply Chain Scanning", href: "/solutions#ai-cybersecurity" },
-      { label: "Data & Model Defense", href: "/solutions#ai-cybersecurity" },
+      { label: "Robustness Testing", href: "/solutions#ai-cybersecurity", subtext: "Adversarial attack resistance checks" },
+      { label: "Confidential Computing", href: "/solutions#ai-cybersecurity", subtext: "Secure enclaves for model execution" },
+      { label: "Prompt Injection Defense", href: "/solutions#ai-cybersecurity", subtext: "Input validation and safety layers" },
+      { label: "Supply Chain Scanning", href: "/solutions#ai-cybersecurity", subtext: "Third-party model vulnerability audits" },
+      { label: "Data & Model Defense", href: "/solutions#ai-cybersecurity", subtext: "Intellectual property protection" },
     ],
   },
   {
     title: "AI Infrastructure",
     href: "/solutions#ai-infrastructure",
+    description: "Robust MLOps and infrastructure designed for enterprise AI workloads.",
+    cta: { text: "Ready to scale your MLOps?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "MLOps / LLMOps Architecture", href: "/solutions#ai-infrastructure" },
-      { label: "Vector Database Deployment", href: "/solutions#ai-infrastructure" },
-      { label: "Kubernetes Orchestration", href: "/solutions#ai-infrastructure" },
-      { label: "Microservices Design", href: "/solutions#ai-infrastructure" },
-      { label: "Storage Optimization", href: "/solutions#ai-infrastructure" },
+      { label: "MLOps / LLMOps Architecture", href: "/solutions#ai-infrastructure", subtext: "Integrated lifecycle management" },
+      { label: "Vector Database Deployment", href: "/solutions#ai-infrastructure", subtext: "Scalable vector index architectures" },
+      { label: "Kubernetes Orchestration", href: "/solutions#ai-infrastructure", subtext: "Automated GPU cluster management" },
+      { label: "Microservices Design", href: "/solutions#ai-infrastructure", subtext: "Modular AI application scaling" },
+      { label: "Storage Optimization", href: "/solutions#ai-infrastructure", subtext: "High-throughput data storage tiers" },
     ],
   },
   {
     title: "Energy Optimization",
     href: "/solutions#energy-optimization",
+    description: "Optimize energy consumption and carbon footprint for large-scale AI.",
+    cta: { text: "Looking for green AI solutions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "GW-Scale Power & Capacity", href: "/solutions#energy-optimization" },
-      { label: "AI Thermal Cooling Transition", href: "/solutions#energy-optimization" },
-      { label: "GPU & Network Energy Audit", href: "/solutions#energy-optimization" },
-      { label: "Sustainable AI & ESG Compliance", href: "/solutions#energy-optimization" },
-      { label: "AI-Driven Facility Operations", href: "/solutions#energy-optimization" },
-      { label: "Waste Heat Recovery & Monetization", href: "/solutions#energy-optimization" },
-      {
-        label: "Next-Gen Power & Microgrid Design",
-        href: "/solutions#energy-optimization",
-      },
+      { label: "GW-Scale Power & Capacity", href: "/solutions#energy-optimization", subtext: "Megawatt-scale power planning" },
+      { label: "AI Thermal Cooling Transition", href: "/solutions#energy-optimization", subtext: "Liquid cooling integration" },
+      { label: "GPU & Network Energy Audit", href: "/solutions#energy-optimization", subtext: "Efficiency audits and reporting" },
+      { label: "Sustainable AI & ESG Compliance", href: "/solutions#energy-optimization", subtext: "Carbon accounting and compliance" },
+      { label: "AI-Driven Facility Operations", href: "/solutions#energy-optimization", subtext: "Smart cooling and power routing" },
+      { label: "Waste Heat Recovery & Monetization", href: "/solutions#energy-optimization", subtext: "Recycling thermal energy" },
+      { label: "Next-Gen Power & Microgrid Design", href: "/solutions#energy-optimization", subtext: "On-site solar, wind, and battery systems" },
     ],
   },
 ];
@@ -391,65 +395,66 @@ const capabilitiesCategories = [
   {
     title: "GPU Optimization",
     href: "/capabilities#gpu-optimization",
+    description: "Deep engineering capabilities in GPU performance tuning.",
+    cta: { text: "Need custom CUDA engineering?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "GPU Super-Scaling & Orchestration", href: "/capabilities#gpu-optimization" },
-      { label: "HPC Network Fabric Engineering", href: "/capabilities#gpu-optimization" },
-      { label: "Real-Time Inference Acceleration", href: "/capabilities#gpu-optimization" },
-      { label: "Custom CUDA/Triton Kernel Dev", href: "/capabilities#gpu-optimization" },
-      { label: "Energy-Efficient GPU Scheduling", href: "/capabilities#gpu-optimization" },
+      { label: "GPU Super-Scaling & Orchestration", href: "/capabilities#gpu-optimization", subtext: "Multi-node scaling architectures" },
+      { label: "HPC Network Fabric Engineering", href: "/capabilities#gpu-optimization", subtext: "InfiniBand and RoCE optimization" },
+      { label: "Real-Time Inference Acceleration", href: "/capabilities#gpu-optimization", subtext: "High-throughput model serving" },
+      { label: "Custom CUDA/Triton Kernel Dev", href: "/capabilities#gpu-optimization", subtext: "Low-level hardware programming" },
+      { label: "Energy-Efficient GPU Scheduling", href: "/capabilities#gpu-optimization", subtext: "Power-aware workload routing" },
     ],
   },
   {
     title: "LLM Optimization",
     href: "/capabilities#llm-optimization",
+    description: "Advanced capabilities in model adaptation and retrieval engineering.",
+    cta: { text: "Want to build custom LLM agents?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      {
-        label: "Domain LLM Adaptation & Alignment",
-        href: "/capabilities#llm-optimization",
-      },
-      { label: "Agentic Workflow & State Design", href: "/capabilities#llm-optimization" },
-      { label: "Semantic Search & Retrieval Eng.", href: "/capabilities#llm-optimization" },
-      { label: "Advanced Prompt Engineering", href: "/capabilities#llm-optimization" },
-      { label: "LLM Evaluation & Benchmarking", href: "/capabilities#llm-optimization" },
+      { label: "Domain LLM Adaptation & Alignment", href: "/capabilities#llm-optimization", subtext: "RLHF, DPO, and fine-tuning" },
+      { label: "Agentic Workflow & State Design", href: "/capabilities#llm-optimization", subtext: "Complex multi-step decision loops" },
+      { label: "Semantic Search & Retrieval Eng.", href: "/capabilities#llm-optimization", subtext: "High-precision RAG architectures" },
+      { label: "Advanced Prompt Engineering", href: "/capabilities#llm-optimization", subtext: "Few-shot and chain-of-thought design" },
+      { label: "LLM Evaluation & Benchmarking", href: "/capabilities#llm-optimization", subtext: "Automated quality and safety metrics" },
     ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/capabilities#ai-trust-reliability",
+    description: "Ensuring safety, observability, and compliance in AI deployments.",
+    cta: { text: "Need to secure your AI pipeline?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Drift & Outlier Analysis", href: "/capabilities#ai-trust-reliability" },
-      {
-        label: "Adversarial Prompt Stress Testing",
-        href: "/capabilities#ai-trust-reliability",
-      },
-      { label: "Deep Traceability & Lineage Tracking", href: "/capabilities#ai-trust-reliability" },
-      { label: "Automated ML Pipeline Orchestration", href: "/capabilities#ai-trust-reliability" },
-      { label: "Chaos Engineering for Distributed AI", href: "/capabilities#ai-trust-reliability" },
+      { label: "Drift & Outlier Analysis", href: "/capabilities#ai-trust-reliability", subtext: "Statistical input and output tracking" },
+      { label: "Adversarial Prompt Stress Testing", href: "/capabilities#ai-trust-reliability", subtext: "Red-teaming model safety bounds" },
+      { label: "Deep Traceability & Lineage Tracking", href: "/capabilities#ai-trust-reliability", subtext: "Data to model version control" },
+      { label: "Automated ML Pipeline Orchestration", href: "/capabilities#ai-trust-reliability", subtext: "Robust MLOps workflow automation" },
+      { label: "Chaos Engineering for Distributed AI", href: "/capabilities#ai-trust-reliability", subtext: "Fault-tolerance testing at scale" },
     ],
   },
   {
     title: "AI Cybersecurity",
     href: "/capabilities#ai-cybersecurity",
+    description: "Advanced cybersecurity capabilities for secure AI environments.",
+    cta: { text: "Need AI pentesting?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Penetration Testing for Neural Nets", href: "/capabilities#ai-cybersecurity" },
-      { label: "Zero-Trust Architecture for ML APIs", href: "/capabilities#ai-cybersecurity" },
-      { label: "TEE / Hardware-Backed Secure Setup", href: "/capabilities#ai-cybersecurity" },
-      { label: "Differential Privacy Implementation", href: "/capabilities#ai-cybersecurity" },
-      { label: "Regulatory Compliance Mapping", href: "/capabilities#ai-cybersecurity" },
+      { label: "Penetration Testing for Neural Nets", href: "/capabilities#ai-cybersecurity", subtext: "Adversarial vulnerability assessments" },
+      { label: "Zero-Trust Architecture for ML APIs", href: "/capabilities#ai-cybersecurity", subtext: "Secure API gateway configurations" },
+      { label: "TEE / Hardware-Backed Secure Setup", href: "/capabilities#ai-cybersecurity", subtext: "Confidential computing implementations" },
+      { label: "Differential Privacy Implementation", href: "/capabilities#ai-cybersecurity", subtext: "Privacy-preserving model training" },
+      { label: "Regulatory Compliance Mapping", href: "/capabilities#ai-cybersecurity", subtext: "SOC 2, ISO 27001, and NIST alignment" },
     ],
   },
   {
     title: "AI Infrastructure",
     href: "/capabilities#ai-infrastructure",
+    description: "Cloud-native infrastructure and cost-control engineering.",
+    cta: { text: "Want to optimize your cloud costs?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Cloud-Native AI Containerization", href: "/capabilities#ai-infrastructure" },
-      { label: "GPU Cluster Provisioning Automation", href: "/capabilities#ai-infrastructure" },
-      { label: "High-Throughput Data Ingestion", href: "/capabilities#ai-infrastructure" },
-      {
-        label: "Infrastructure FinOps Cost Control",
-        href: "/capabilities#ai-infrastructure",
-      },
-      { label: "Real-Time Streaming Data Integration", href: "/capabilities#ai-infrastructure" },
+      { label: "Cloud-Native AI Containerization", href: "/capabilities#ai-infrastructure", subtext: "Docker, Kubernetes, and Helm setups" },
+      { label: "GPU Cluster Provisioning Automation", href: "/capabilities#ai-infrastructure", subtext: "Infrastructure as Code (Terraform)" },
+      { label: "High-Throughput Data Ingestion", href: "/capabilities#ai-infrastructure", subtext: "Real-time feature store pipelines" },
+      { label: "Infrastructure FinOps Cost Control", href: "/capabilities#ai-infrastructure", subtext: "GPU allocation and waste reduction" },
+      { label: "Real-Time Streaming Data Integration", href: "/capabilities#ai-infrastructure", subtext: "Kafka and Flink data pipelines" },
     ],
   },
 ];
@@ -458,65 +463,66 @@ const useCasesCategories = [
   {
     title: "GPU Optimization",
     href: "/use-cases#gpu-optimization",
+    description: "Real-world applications of GPU performance engineering.",
+    cta: { text: "Want to scale your training?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Distributed Model Pre-training", href: "/use-cases#gpu-optimization" },
-      { label: "Ultra-low Latency HPC Simulations", href: "/use-cases#gpu-optimization" },
-      { label: "LLM Pre-training Acceleration", href: "/use-cases#gpu-optimization" },
-      { label: "Real-time Video & CV Pipelines", href: "/use-cases#gpu-optimization" },
-      { label: "High-frequency Trading Execution", href: "/use-cases#gpu-optimization" },
+      { label: "Distributed Model Pre-training", href: "/use-cases#gpu-optimization", subtext: "Scaling LLMs across thousands of GPUs" },
+      { label: "Ultra-low Latency HPC Simulations", href: "/use-cases#gpu-optimization", subtext: "Scientific and financial modeling" },
+      { label: "LLM Pre-training Acceleration", href: "/use-cases#gpu-optimization", subtext: "Throughput optimization and cost reduction" },
+      { label: "Real-time Video & CV Pipelines", href: "/use-cases#gpu-optimization", subtext: "Multi-stream computer vision serving" },
+      { label: "High-frequency Trading Execution", href: "/use-cases#gpu-optimization", subtext: "Sub-millisecond decision processing" },
     ],
   },
   {
     title: "LLM Optimization",
     href: "/use-cases#llm-optimization",
+    description: "Production use cases for optimized language models.",
+    cta: { text: "Need enterprise search solutions?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Enterprise Knowledge Base Search", href: "/use-cases#llm-optimization" },
-      { label: "Automated Code Gen & Review", href: "/use-cases#llm-optimization" },
-      { label: "Intelligent Document Processing (IDP)", href: "/use-cases#llm-optimization" },
-      { label: "Customer Support Ticket Resolution", href: "/use-cases#llm-optimization" },
-      { label: "Complex Data Text-to-SQL Routing", href: "/use-cases#llm-optimization" },
+      { label: "Enterprise Knowledge Base Search", href: "/use-cases#llm-optimization", subtext: "Contextual search across unstructured data" },
+      { label: "Automated Code Gen & Review", href: "/use-cases#llm-optimization", subtext: "Domain-adapted coding assistants" },
+      { label: "Intelligent Document Processing (IDP)", href: "/use-cases#llm-optimization", subtext: "Information extraction from complex PDFs" },
+      { label: "Customer Support Ticket Resolution", href: "/use-cases#llm-optimization", subtext: "Agentic email and chat automation" },
+      { label: "Complex Data Text-to-SQL Routing", href: "/use-cases#llm-optimization", subtext: "Natural language database querying" },
     ],
   },
   {
     title: "AI Trust & Reliability",
     href: "/use-cases#ai-trust-reliability",
+    description: "Operationalizing trust and safety in critical domains.",
+    cta: { text: "Want to secure your chatbot?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Fraud Drift Prevention", href: "/use-cases#ai-trust-reliability" },
-      {
-        label: "Healthcare Diagnostic AI Assurance",
-        href: "/use-cases#ai-trust-reliability",
-      },
-      { label: "Chatbot Toxicity & Safety Guardrails", href: "/use-cases#ai-trust-reliability" },
-      { label: "Trading Stability Monitoring", href: "/use-cases#ai-trust-reliability" },
-      { label: "Sensor Drift Correction", href: "/use-cases#ai-trust-reliability" },
+      { label: "Fraud Drift Prevention", href: "/use-cases#ai-trust-reliability", subtext: "Adapting detection models to changing fraud patterns" },
+      { label: "Healthcare Diagnostic AI Assurance", href: "/use-cases#ai-trust-reliability", subtext: "Verifying medical imaging model reliability" },
+      { label: "Chatbot Toxicity & Safety Guardrails", href: "/use-cases#ai-trust-reliability", subtext: "Real-time moderation and safety filtering" },
+      { label: "Trading Stability Monitoring", href: "/use-cases#ai-trust-reliability", subtext: "Preventing rogue trading agent behaviors" },
+      { label: "Sensor Drift Correction", href: "/use-cases#ai-trust-reliability", subtext: "Calibrating industrial IoT models automatically" },
     ],
   },
   {
     title: "AI Cybersecurity",
     href: "/use-cases#ai-cybersecurity",
+    description: "Securing AI systems in hostile environments.",
+    cta: { text: "Worried about model theft?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Chatbot Prompt Injection Defenses", href: "/use-cases#ai-cybersecurity" },
-      { label: "LLM Weights Theft Protection", href: "/use-cases#ai-cybersecurity" },
-      { label: "Patient Data Reconstruction Defense", href: "/use-cases#ai-cybersecurity" },
-      { label: "Biometric System Adversarial Hardening", href: "/use-cases#ai-cybersecurity" },
-      { label: "Third-party ML Dependency Audits", href: "/use-cases#ai-cybersecurity" },
+      { label: "Chatbot Prompt Injection Defenses", href: "/use-cases#ai-cybersecurity", subtext: "Blocking jailbreak and system-prompt leak attempts" },
+      { label: "LLM Weights Theft Protection", href: "/use-cases#ai-cybersecurity", subtext: "Securing model parameters in untrusted clouds" },
+      { label: "Patient Data Reconstruction Defense", href: "/use-cases#ai-cybersecurity", subtext: "Preventing membership inference attacks" },
+      { label: "Biometric System Adversarial Hardening", href: "/use-cases#ai-cybersecurity", subtext: "Defending facial recognition from spoofing" },
+      { label: "Third-party ML Dependency Audits", href: "/use-cases#ai-cybersecurity", subtext: "Scanning open-source packages and weights" },
     ],
   },
   {
     title: "AI Infrastructure",
     href: "/use-cases#ai-infrastructure",
+    description: "Optimizing the underlying stack for extreme scale.",
+    cta: { text: "Ready to build carbon-aware AI?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      {
-        label: "Carbon-Aware Energy Optimization",
-        href: "/use-cases#ai-infrastructure",
-      },
-      { label: "GPU Direct Storage I/O Optimization", href: "/use-cases#ai-infrastructure" },
-      { label: "Unified Memory (UMA) Optimization", href: "/use-cases#ai-infrastructure" },
-      { label: "Enterprise ML Platform Engineering", href: "/use-cases#ai-infrastructure" },
-      {
-        label: "Failover Multi-Inference Routing",
-        href: "/use-cases#ai-infrastructure",
-      },
+      { label: "Carbon-Aware Energy Optimization", href: "/use-cases#ai-infrastructure", subtext: "Scheduling training based on green grid availability" },
+      { label: "GPU Direct Storage I/O Optimization", href: "/use-cases#ai-infrastructure", subtext: "Bypassing CPU for ultra-fast data loading" },
+      { label: "Unified Memory (UMA) Optimization", href: "/use-cases#ai-infrastructure", subtext: "Efficiently running models larger than GPU memory" },
+      { label: "Enterprise ML Platform Engineering", href: "/use-cases#ai-infrastructure", subtext: "Building shared internal developer platforms" },
+      { label: "Failover Multi-Inference Routing", href: "/use-cases#ai-infrastructure", subtext: "Automated routing across redundant GPU clusters" },
     ],
   },
 ];
@@ -525,31 +531,37 @@ const platformCategories = [
   {
     title: "GPU-phi Orchestration",
     href: "/platform#gpu-phi-cloud-neutral-orchestration",
+    description: "Cloud-neutral GPU orchestration and resource scheduling.",
+    cta: { text: "Want to try GPU-phi Orchestration?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Multi-Cluster Management", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
-      { label: "Topology-Aware Scheduling", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
-      { label: "MIG & vGPU Partitioning", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
-      { label: "Preemptible GPU Arbitrage", href: "/platform#gpu-phi-cloud-neutral-orchestration" },
+      { label: "Multi-Cluster Management", href: "/platform#gpu-phi-cloud-neutral-orchestration", subtext: "Orchestrate workloads across multiple clouds" },
+      { label: "Topology-Aware Scheduling", href: "/platform#gpu-phi-cloud-neutral-orchestration", subtext: "Optimize placement based on NVLink topology" },
+      { label: "MIG & vGPU Partitioning", href: "/platform#gpu-phi-cloud-neutral-orchestration", subtext: "Slice physical GPUs for multi-tenant efficiency" },
+      { label: "Preemptible GPU Arbitrage", href: "/platform#gpu-phi-cloud-neutral-orchestration", subtext: "Automatically swap workloads to cheaper spot instances" },
     ],
   },
   {
     title: "GPU FinOps Dashboard",
     href: "/platform#gpu-finops-dashboard",
+    description: "Granular cost allocation and resource efficiency metrics.",
+    cta: { text: "Want to analyze your GPU spending?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Granular Cost Allocation", href: "/platform#gpu-finops-dashboard" },
-      { label: "Idle Detection & Alerting", href: "/platform#gpu-finops-dashboard" },
-      { label: "Spot Arbitrage Scheduling", href: "/platform#gpu-finops-dashboard" },
-      { label: "Budget Limits & showback", href: "/platform#gpu-finops-dashboard" },
+      { label: "Granular Cost Allocation", href: "/platform#gpu-finops-dashboard", subtext: "Track cost down to individual teams and models" },
+      { label: "Idle Detection & Alerting", href: "/platform#gpu-finops-dashboard", subtext: "Instantly alert when reserved GPUs are unutilized" },
+      { label: "Spot Arbitrage Scheduling", href: "/platform#gpu-finops-dashboard", subtext: "Arbitrage between spot market rates in real-time" },
+      { label: "Budget Limits & showback", href: "/platform#gpu-finops-dashboard", subtext: "Enforce department budgets and showback reporting" },
     ],
   },
   {
     title: "Self-Healing Clusters",
     href: "/platform#self-healing-clusters",
+    description: "Predictive monitoring and automated cluster recovery.",
+    cta: { text: "Ready for zero-downtime AI training?", buttonText: "Contact Us", href: "/contact" },
     items: [
-      { label: "Predictive Node Failure Analysis", href: "/platform#self-healing-clusters" },
-      { label: "Automated Checkpoint-and-Resume", href: "/platform#self-healing-clusters" },
-      { label: "Fast Node Isolation (Fencing)", href: "/platform#self-healing-clusters" },
-      { label: "Memory & GPU Diagnostic Sweeps", href: "/platform#self-healing-clusters" },
+      { label: "Predictive Node Failure Analysis", href: "/platform#self-healing-clusters", subtext: "Identify hardware degradation before nodes crash" },
+      { label: "Automated Checkpoint-and-Resume", href: "/platform#self-healing-clusters", subtext: "Instantly resume training on healthy nodes" },
+      { label: "Fast Node Isolation (Fencing)", href: "/platform#self-healing-clusters", subtext: "Quarantine faulty nodes from the active fabric" },
+      { label: "Memory & GPU Diagnostic Sweeps", href: "/platform#self-healing-clusters", subtext: "Continuous background hardware health verification" },
     ],
   },
 ];
@@ -696,6 +708,15 @@ function getCategoryIcon(title: string) {
 
 function getSubcategoryIcon(label: string) {
   const text = label.toLowerCase();
+  if (text.includes("consulting"))
+    return Cpu;
+  if (text.includes("partner"))
+    return Users;
+  if (text.includes("sales") || text.includes("enquiry"))
+    return Coins;
+  if (text.includes("contact"))
+    return Phone;
+
   if (
     text.includes("gpu") ||
     text.includes("cuda") ||
@@ -805,6 +826,121 @@ function getSubcategoryIcon(label: string) {
   return ChevronRight;
 }
 
+interface MenuItem {
+  label: string;
+  href: string;
+  subtext?: string;
+  icon?: React.ComponentType<{ className?: string }>;
+}
+
+interface MenuCategory {
+  title: string;
+  href: string;
+  description?: string;
+  items: MenuItem[];
+  cta?: {
+    text: string;
+    buttonText: string;
+    href: string;
+  };
+}
+
+function TabbedMegaMenu({
+  mainTitle,
+  mainDescription,
+  categories,
+}: {
+  mainTitle: string;
+  mainDescription: string;
+  categories: MenuCategory[];
+}) {
+  const [activeTabIdx, setActiveTabIdx] = useState(0);
+  const activeCategory = categories[activeTabIdx] || categories[0];
+
+  return (
+    <div className="nav-dropdown w-[980px] max-w-[95vw] p-0 overflow-hidden flex flex-row border border-border/40 bg-surface/95 backdrop-blur-xl rounded-2xl shadow-2xl">
+      {/* Left Pane (Sidebar) */}
+      <div className="w-[32%] bg-muted/10 border-r border-border/30 p-6 flex flex-col justify-between">
+        <div>
+          <h3 className="text-base font-bold text-foreground mb-1 font-display">{mainTitle}</h3>
+          <p className="text-xs text-muted-foreground/80 leading-relaxed mb-6">{mainDescription}</p>
+          
+          <div className="space-y-1">
+            {categories.map((cat, idx) => (
+              <button
+                key={cat.title}
+                onMouseEnter={() => setActiveTabIdx(idx)}
+                onClick={() => setActiveTabIdx(idx)}
+                className={`w-full flex items-center justify-between text-left py-2.5 px-3.5 rounded-xl text-[13px] font-semibold transition-all duration-200 ${
+                  activeTabIdx === idx
+                    ? "bg-card border border-border/60 text-blue-400 shadow-sm"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/20"
+                }`}
+              >
+                <span>{cat.title}</span>
+                {activeTabIdx === idx && (
+                  <ChevronRight className="h-4 w-4 text-blue-400 animate-in fade-in slide-in-from-left-1 duration-150" />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Right Pane (Content) */}
+      <div className="w-[68%] p-6 flex flex-col justify-between min-h-[380px] bg-card/5">
+        <div>
+          {/* Header */}
+          <div className="text-[10px] font-extrabold tracking-widest text-muted-foreground uppercase mb-3">
+            {activeCategory.title}
+          </div>
+          <hr className="border-border/20 mb-5" />
+
+          {/* Grid of items */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+            {activeCategory.items.map((item) => (
+              <SectionLink
+                key={item.label}
+                href={item.href}
+                className="group/item flex items-start justify-between p-3 rounded-xl border border-transparent hover:border-border/45 hover:bg-muted/20 transition-all duration-200"
+              >
+                <div className="flex-1 pr-2">
+                  <div className="text-xs font-bold text-foreground group-hover/item:text-blue-400 transition-colors mb-0.5">
+                    {item.label}
+                  </div>
+                  {item.subtext && (
+                    <div className="text-[11px] text-muted-foreground/85 leading-relaxed">
+                      {item.subtext}
+                    </div>
+                  )}
+                </div>
+                <ChevronRight className="h-4 w-4 text-muted-foreground/30 group-hover/item:text-blue-400 group-hover/item:translate-x-1 transition-all duration-200 shrink-0 mt-0.5" />
+              </SectionLink>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer Banner */}
+        {activeCategory.cta && (
+          <div className="mt-6 p-4 rounded-xl bg-muted/20 border border-border/30 flex items-center justify-between">
+            <span className="text-xs text-muted-foreground/90 font-medium">
+              {activeCategory.cta.text}
+            </span>
+            <SectionLink href={activeCategory.cta.href}>
+              <Button
+                size="sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md shadow-blue-500/10 cursor-pointer px-4 py-2 rounded-lg transition-all"
+              >
+                {activeCategory.cta.buttonText}
+              </Button>
+            </SectionLink>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function HomeDropdown() {
   return (
     <div className="nav-dropdown w-[680px]">
@@ -833,248 +969,61 @@ function HomeDropdown() {
 
 function OfferingsDropdown() {
   return (
-    <div className="nav-dropdown w-[1460px] max-w-[95vw]">
-      <div className="grid grid-cols-6 gap-x-10 gap-y-6">
-        {offeringsCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col">
-            <SectionLink
-              href={cat.href}
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(cat.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {cat.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {cat.items.map((item) => (
-                <SectionLink
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  {(() => {
-                    const Icon = getSubcategoryIcon(item.label);
-                    return (
-                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
-                    );
-                  })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Offerings"
+      mainDescription="Explore our comprehensive suite of AI and GPU performance optimization services."
+      categories={offeringsCategories}
+    />
   );
 }
 
 function IndustriesDropdown() {
   return (
-    <div className="nav-dropdown w-[1220px] max-w-[95vw]">
-      <div className="grid grid-cols-4 gap-x-12 gap-y-10">
-        {industrySegments.map((segment) => (
-          <div key={segment.title} className="flex flex-col">
-            <SectionLink
-              href="/industries"
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(segment.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {segment.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {segment.items.map((item) => (
-                <SectionLink
-                  key={item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  <item.icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-600 transition-colors shrink-0 mt-0.5" />
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Industries"
+      mainDescription="Tailored AI and optimization solutions for key vertical segments."
+      categories={industrySegments}
+    />
   );
 }
 
 function SolutionsDropdown() {
   return (
-    <div className="nav-dropdown w-[1460px] max-w-[95vw]">
-      <div className="grid grid-cols-6 gap-x-10 gap-y-6">
-        {solutionsCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col">
-            <SectionLink
-              href={cat.href}
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(cat.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {cat.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {cat.items.map((item) => (
-                <SectionLink
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  {(() => {
-                    const Icon = getSubcategoryIcon(item.label);
-                    return (
-                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
-                    );
-                  })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Solutions"
+      mainDescription="Deploy large-scale AI applications with optimized cost, latency, and security."
+      categories={solutionsCategories}
+    />
   );
 }
 
 function CapabilitiesDropdown() {
   return (
-    <div className="nav-dropdown w-[1280px] max-w-[95vw]">
-      <div className="grid grid-cols-5 gap-x-10 gap-y-6">
-        {capabilitiesCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col">
-            <SectionLink
-              href={cat.href}
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(cat.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {cat.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {cat.items.map((item) => (
-                <SectionLink
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  {(() => {
-                    const Icon = getSubcategoryIcon(item.label);
-                    return (
-                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
-                    );
-                  })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Capabilities"
+      mainDescription="Our deep engineering capabilities across the entire AI and GPU stack."
+      categories={capabilitiesCategories}
+    />
   );
 }
 
 function UseCasesDropdown() {
   return (
-    <div className="nav-dropdown w-[1280px] max-w-[95vw]">
-      <div className="grid grid-cols-5 gap-x-10 gap-y-6">
-        {useCasesCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col">
-            <SectionLink
-              href={cat.href}
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(cat.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {cat.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {cat.items.map((item) => (
-                <SectionLink
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  {(() => {
-                    const Icon = getSubcategoryIcon(item.label);
-                    return (
-                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
-                    );
-                  })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Use Cases"
+      mainDescription="Real-world case studies and applications of our AI optimization technology."
+      categories={useCasesCategories}
+    />
   );
 }
 
 function PlatformDropdown() {
   return (
-    <div className="nav-dropdown w-[1000px] max-w-[95vw]">
-      <div className="grid grid-cols-3 gap-x-12 gap-y-6">
-        {platformCategories.map((cat) => (
-          <div key={cat.title} className="flex flex-col">
-            <SectionLink
-              href={cat.href}
-              className="flex items-center gap-2 text-[11px] font-extrabold text-foreground hover:text-blue-600 transition-colors tracking-widest uppercase mb-4 border-b border-border/40 pb-2.5"
-            >
-              {(() => {
-                const Icon = getCategoryIcon(cat.title);
-                return <Icon className="h-4 w-4 text-blue-500" />;
-              })()}
-              {cat.title}
-            </SectionLink>
-            <div className="flex flex-col gap-1.5">
-              {cat.items.map((item) => (
-                <SectionLink
-                  key={item.href + item.label}
-                  href={item.href}
-                  className="flex items-start gap-2.5 py-1.5 px-2 rounded-lg hover:bg-blue-50/50 group/item transition-all border border-transparent hover:border-blue-100/20"
-                >
-                  {(() => {
-                    const Icon = getSubcategoryIcon(item.label);
-                    return (
-                      <Icon className="h-3.5 w-3.5 text-muted-foreground group-hover/item:text-blue-500 transition-all duration-200 group-hover/item:translate-x-1 shrink-0 mt-0.5" />
-                    );
-                  })()}
-                  <span className="text-[13px] font-semibold text-foreground/90 group-hover/item:text-blue-600 transition-colors leading-snug font-sans tracking-wide line-clamp-2">
-                    {item.label}
-                  </span>
-                </SectionLink>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <TabbedMegaMenu
+      mainTitle="Platform"
+      mainDescription="Enterprise-grade software platforms for GPU orchestration and monitoring."
+      categories={platformCategories}
+    />
   );
 }
 

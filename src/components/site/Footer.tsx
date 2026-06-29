@@ -91,7 +91,10 @@ const footerCols = [
       { href: "/about#presence", label: "Global Presence" },
       { href: "/about#case-studies", label: "Case Studies" },
       { href: "/about#insights", label: "Insights & Blog" },
-      { href: "/about#contact", label: "Contact Us" },
+      { href: "/contact", label: "Contact Us" },
+      { href: "/consulting", label: "Consulting Session" },
+      { href: "/partnership", label: "Partner Program" },
+      { href: "/sales-enquiry", label: "Sales Enquiry" },
     ],
   },
 ];

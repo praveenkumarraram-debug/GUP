@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactForm } from "@/components/site/ContactForm";
-import { Mail, Phone, Globe2 } from "lucide-react";
+import { Mail, Phone, Globe2, Cpu, Handshake, Coins } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -25,9 +25,92 @@ function ContactPage() {
         title="Schedule an enterprise consultation"
         description="Speak with a TrustGrid.AI principal engineer about your AI roadmap. Most enterprise engagements begin with a tailored 48-hour capability assessment."
       />
-      <section className="mx-auto max-w-7xl px-6 py-16 grid lg:grid-cols-[1fr_400px] gap-12">
-        <ContactForm />
-        <aside className="space-y-8">
+      
+      {/* Specialized Form Selectors */}
+      <section className="mx-auto max-w-7xl px-6 pt-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-[10px] font-semibold uppercase tracking-widest text-accent/80 block mb-2">
+            Looking for a specialized request?
+          </span>
+          <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground font-display">
+            Select a specialized form below for faster routing
+          </h2>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Consulting Card */}
+          <Link
+            to="/consulting"
+            className="premium-card p-6 flex flex-col justify-between hover:border-blue-500/40 hover:shadow-[0_12px_30px_-10px_rgba(59,130,246,0.1)] transition-all duration-300 rounded-xl bg-surface/30 group"
+          >
+            <div>
+              <div className="h-10 w-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors mb-4">
+                <Cpu className="h-5 w-5" />
+              </div>
+              <h3 className="text-base font-bold text-foreground mb-2 flex items-center gap-1.5">
+                Consulting Form
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                Request a dedicated capability strategy session, code performance audit, or custom hardware optimization session.
+              </p>
+            </div>
+            <span className="text-xs font-semibold text-accent group-hover:text-foreground flex items-center gap-1 mt-auto">
+              Schedule consulting &rarr;
+            </span>
+          </Link>
+
+          {/* Partnership Card */}
+          <Link
+            to="/partnership"
+            className="premium-card p-6 flex flex-col justify-between hover:border-violet-500/40 hover:shadow-[0_12px_30px_-10px_rgba(139,92,246,0.1)] transition-all duration-300 rounded-xl bg-surface/30 group"
+          >
+            <div>
+              <div className="h-10 w-10 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 group-hover:text-violet-300 transition-colors mb-4">
+                <Handshake className="h-5 w-5" />
+              </div>
+              <h3 className="text-base font-bold text-foreground mb-2 flex items-center gap-1.5">
+                Partnership Form
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                Connect with our ecosystem team to discuss system integration services, technology vendor alignment, or co-selling.
+              </p>
+            </div>
+            <span className="text-xs font-semibold text-accent group-hover:text-foreground flex items-center gap-1 mt-auto">
+              Apply for partnership &rarr;
+            </span>
+          </Link>
+
+          {/* Sales Card */}
+          <Link
+            to="/sales-enquiry"
+            className="premium-card p-6 flex flex-col justify-between hover:border-emerald-500/40 hover:shadow-[0_12px_30px_-10px_rgba(16,185,129,0.1)] transition-all duration-300 rounded-xl bg-surface/30 group"
+          >
+            <div>
+              <div className="h-10 w-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:text-emerald-300 transition-colors mb-4">
+                <Coins className="h-5 w-5" />
+              </div>
+              <h3 className="text-base font-bold text-foreground mb-2 flex items-center gap-1.5">
+                Sales Enquiry Form
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                Inquire about volume software licenses for GPU-phi, custom node sizing quotes, and enterprise SLAs.
+              </p>
+            </div>
+            <span className="text-xs font-semibold text-accent group-hover:text-foreground flex items-center gap-1 mt-auto">
+              Contact Sales &rarr;
+            </span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 grid lg:grid-cols-[1fr_400px] gap-12 border-t border-border/20 mt-10">
+        <div className="space-y-4">
+          <div className="mb-2">
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">General Enquiries</span>
+            <h2 className="text-lg font-bold text-foreground font-display mt-1">General Contact Request</h2>
+          </div>
+          <ContactForm />
+        </div>
+        <aside className="space-y-8 mt-14">
           <div className="rounded-xl border border-border/60 bg-surface/30 p-6">
             <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Global Coverage</h3>
             <div className="mt-4 space-y-3 text-sm text-muted-foreground">

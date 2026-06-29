@@ -15,8 +15,10 @@ import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SalesEnquiryRouteImport } from './routes/sales-enquiry'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PlatformRouteImport } from './routes/platform'
+import { Route as PartnershipRouteImport } from './routes/partnership'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as MultiAgentSystemsRouteImport } from './routes/multi-agent-systems'
 import { Route as LongMemoryAiSystemsRouteImport } from './routes/long-memory-ai-systems'
@@ -26,6 +28,7 @@ import { Route as GpuPerformanceEngineeringRouteImport } from './routes/gpu-perf
 import { Route as CopyrightRouteImport } from './routes/copyright'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ConsultingRouteImport } from './routes/consulting'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as CapabilitiesRouteImport } from './routes/capabilities'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -67,6 +70,11 @@ const SecurityRoute = SecurityRouteImport.update({
   path: '/security',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SalesEnquiryRoute = SalesEnquiryRouteImport.update({
+  id: '/sales-enquiry',
+  path: '/sales-enquiry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -75,6 +83,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const PlatformRoute = PlatformRouteImport.update({
   id: '/platform',
   path: '/platform',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnershipRoute = PartnershipRouteImport.update({
+  id: '/partnership',
+  path: '/partnership',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OfferingsRoute = OfferingsRouteImport.update({
@@ -121,6 +134,11 @@ const CookiesRoute = CookiesRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultingRoute = ConsultingRouteImport.update({
+  id: '/consulting',
+  path: '/consulting',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
@@ -185,6 +203,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/capabilities': typeof CapabilitiesRoute
   '/case-studies': typeof CaseStudiesRoute
+  '/consulting': typeof ConsultingRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
   '/copyright': typeof CopyrightRoute
@@ -194,8 +213,10 @@ export interface FileRoutesByFullPath {
   '/long-memory-ai-systems': typeof LongMemoryAiSystemsRoute
   '/multi-agent-systems': typeof MultiAgentSystemsRoute
   '/offerings': typeof OfferingsRoute
+  '/partnership': typeof PartnershipRoute
   '/platform': typeof PlatformRoute
   '/privacy': typeof PrivacyRoute
+  '/sales-enquiry': typeof SalesEnquiryRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -214,6 +235,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/capabilities': typeof CapabilitiesRoute
   '/case-studies': typeof CaseStudiesRoute
+  '/consulting': typeof ConsultingRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
   '/copyright': typeof CopyrightRoute
@@ -223,8 +245,10 @@ export interface FileRoutesByTo {
   '/long-memory-ai-systems': typeof LongMemoryAiSystemsRoute
   '/multi-agent-systems': typeof MultiAgentSystemsRoute
   '/offerings': typeof OfferingsRoute
+  '/partnership': typeof PartnershipRoute
   '/platform': typeof PlatformRoute
   '/privacy': typeof PrivacyRoute
+  '/sales-enquiry': typeof SalesEnquiryRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -244,6 +268,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/capabilities': typeof CapabilitiesRoute
   '/case-studies': typeof CaseStudiesRoute
+  '/consulting': typeof ConsultingRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
   '/copyright': typeof CopyrightRoute
@@ -253,8 +278,10 @@ export interface FileRoutesById {
   '/long-memory-ai-systems': typeof LongMemoryAiSystemsRoute
   '/multi-agent-systems': typeof MultiAgentSystemsRoute
   '/offerings': typeof OfferingsRoute
+  '/partnership': typeof PartnershipRoute
   '/platform': typeof PlatformRoute
   '/privacy': typeof PrivacyRoute
+  '/sales-enquiry': typeof SalesEnquiryRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -275,6 +302,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/capabilities'
     | '/case-studies'
+    | '/consulting'
     | '/contact'
     | '/cookies'
     | '/copyright'
@@ -284,8 +312,10 @@ export interface FileRouteTypes {
     | '/long-memory-ai-systems'
     | '/multi-agent-systems'
     | '/offerings'
+    | '/partnership'
     | '/platform'
     | '/privacy'
+    | '/sales-enquiry'
     | '/security'
     | '/services'
     | '/sitemap.xml'
@@ -304,6 +334,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/capabilities'
     | '/case-studies'
+    | '/consulting'
     | '/contact'
     | '/cookies'
     | '/copyright'
@@ -313,8 +344,10 @@ export interface FileRouteTypes {
     | '/long-memory-ai-systems'
     | '/multi-agent-systems'
     | '/offerings'
+    | '/partnership'
     | '/platform'
     | '/privacy'
+    | '/sales-enquiry'
     | '/security'
     | '/services'
     | '/sitemap.xml'
@@ -333,6 +366,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/capabilities'
     | '/case-studies'
+    | '/consulting'
     | '/contact'
     | '/cookies'
     | '/copyright'
@@ -342,8 +376,10 @@ export interface FileRouteTypes {
     | '/long-memory-ai-systems'
     | '/multi-agent-systems'
     | '/offerings'
+    | '/partnership'
     | '/platform'
     | '/privacy'
+    | '/sales-enquiry'
     | '/security'
     | '/services'
     | '/sitemap.xml'
@@ -363,6 +399,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CapabilitiesRoute: typeof CapabilitiesRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
+  ConsultingRoute: typeof ConsultingRoute
   ContactRoute: typeof ContactRoute
   CookiesRoute: typeof CookiesRoute
   CopyrightRoute: typeof CopyrightRoute
@@ -372,8 +409,10 @@ export interface RootRouteChildren {
   LongMemoryAiSystemsRoute: typeof LongMemoryAiSystemsRoute
   MultiAgentSystemsRoute: typeof MultiAgentSystemsRoute
   OfferingsRoute: typeof OfferingsRoute
+  PartnershipRoute: typeof PartnershipRoute
   PlatformRoute: typeof PlatformRoute
   PrivacyRoute: typeof PrivacyRoute
+  SalesEnquiryRoute: typeof SalesEnquiryRoute
   SecurityRoute: typeof SecurityRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -427,6 +466,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SecurityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sales-enquiry': {
+      id: '/sales-enquiry'
+      path: '/sales-enquiry'
+      fullPath: '/sales-enquiry'
+      preLoaderRoute: typeof SalesEnquiryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -439,6 +485,13 @@ declare module '@tanstack/react-router' {
       path: '/platform'
       fullPath: '/platform'
       preLoaderRoute: typeof PlatformRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnership': {
+      id: '/partnership'
+      path: '/partnership'
+      fullPath: '/partnership'
+      preLoaderRoute: typeof PartnershipRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/offerings': {
@@ -502,6 +555,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consulting': {
+      id: '/consulting'
+      path: '/consulting'
+      fullPath: '/consulting'
+      preLoaderRoute: typeof ConsultingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies': {
@@ -587,6 +647,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CapabilitiesRoute: CapabilitiesRoute,
   CaseStudiesRoute: CaseStudiesRoute,
+  ConsultingRoute: ConsultingRoute,
   ContactRoute: ContactRoute,
   CookiesRoute: CookiesRoute,
   CopyrightRoute: CopyrightRoute,
@@ -596,8 +657,10 @@ const rootRouteChildren: RootRouteChildren = {
   LongMemoryAiSystemsRoute: LongMemoryAiSystemsRoute,
   MultiAgentSystemsRoute: MultiAgentSystemsRoute,
   OfferingsRoute: OfferingsRoute,
+  PartnershipRoute: PartnershipRoute,
   PlatformRoute: PlatformRoute,
   PrivacyRoute: PrivacyRoute,
+  SalesEnquiryRoute: SalesEnquiryRoute,
   SecurityRoute: SecurityRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
